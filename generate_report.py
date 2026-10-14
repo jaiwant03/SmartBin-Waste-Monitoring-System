@@ -1,12 +1,12 @@
 """
 SmartBin IoT Project - High-Legibility Academic PDF Report Generator
 Features:
-- Increased font size (10.5pt body text, 14pt headings, 18pt title) for maximum readability and visual impact
+- Increased font size (10pt body text, 13.5pt headings, 16.5pt title) for maximum readability and visual impact
 - Times New Roman typography throughout
 - Expanded multi-page layout (11 pages) with generous breathing room
 - Exact solid rectangular border frame with consistent margins on every single page matching user's image
 - Crisp high-resolution SVG diagrams and embedded dashboard screenshots
-- Outputs both REPORT.pdf and SmartBin_Project_Report.pdf
+- Outputs REPORT.pdf (and SmartBin_Project_Report.pdf when unlocked)
 """
 
 import os
@@ -39,8 +39,8 @@ def build_report_html():
     font-family: 'Times New Roman', Times, 'Nimbus Roman No9 L', serif;
     color: #111827;
     background: #ffffff;
-    line-height: 1.48;
-    font-size: 10.2pt;
+    line-height: 1.44;
+    font-size: 9.8pt;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -65,7 +65,7 @@ def build_report_html():
     width: 100%;
     height: 100%;
     border: 1.5px solid #111827; /* Clean solid academic frame border */
-    padding: 9mm 11mm 8mm 11mm; /* Inner content padding inside the frame */
+    padding: 8mm 11mm 7mm 11mm; /* Inner content padding inside the frame */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -84,10 +84,10 @@ def build_report_html():
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 3.5px;
-    margin-bottom: 8px;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 8.5pt;
+    font-size: 8.2pt;
     font-style: italic;
     color: #4b5563;
   }
@@ -97,10 +97,10 @@ def build_report_html():
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #cbd5e1;
-    padding-top: 3.5px;
-    margin-top: 6px;
+    padding-top: 3px;
+    margin-top: 5px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 8.5pt;
+    font-size: 8.2pt;
     color: #4b5563;
   }
 
@@ -112,7 +112,7 @@ def build_report_html():
   /* Document Titles */
   h1.report-main-title {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16.5pt;
+    font-size: 16pt;
     font-weight: bold;
     color: #0f172a;
     line-height: 1.25;
@@ -123,10 +123,10 @@ def build_report_html():
 
   .report-subtitle {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10.2pt;
+    font-size: 9.8pt;
     font-style: italic;
     color: #1d4ed8;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
     text-align: center;
   }
 
@@ -138,16 +138,16 @@ def build_report_html():
     background: #f8fafc;
     border: 1px solid #cbd5e1;
     border-radius: 3px;
-    padding: 6px 10px;
-    margin-bottom: 8px;
+    padding: 5px 9px;
+    margin-bottom: 7px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 8.5pt;
+    font-size: 8.2pt;
   }
 
   .meta-item strong {
     display: block;
     color: #475569;
-    font-size: 7.5pt;
+    font-size: 7.2pt;
     text-transform: uppercase;
     letter-spacing: 0.3px;
   }
@@ -160,63 +160,63 @@ def build_report_html():
   /* Academic Section Headings */
   h2.section-heading {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 13.2pt;
+    font-size: 12.8pt;
     font-weight: bold;
     color: #0f172a;
     border-bottom: 1.8px solid #1e293b;
-    padding-bottom: 3px;
-    margin-top: 7px;
-    margin-bottom: 5px;
+    padding-bottom: 2.5px;
+    margin-top: 6px;
+    margin-bottom: 4.5px;
     letter-spacing: -0.1px;
   }
 
   h3.sub-heading {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10.8pt;
+    font-size: 10.5pt;
     font-weight: bold;
     color: #1e293b;
-    margin-top: 6px;
-    margin-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 2.5px;
   }
 
   p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10pt;
+    font-size: 9.7pt;
     color: #1e293b;
-    margin-bottom: 5px;
+    margin-bottom: 4.5px;
     text-align: justify;
     text-justify: inter-word;
-    line-height: 1.48;
+    line-height: 1.45;
   }
 
   ul, ol {
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 18px;
-    margin-bottom: 5px;
-    font-size: 9.8pt;
+    margin-left: 17px;
+    margin-bottom: 4.5px;
+    font-size: 9.5pt;
     color: #1e293b;
     text-align: justify;
-    line-height: 1.45;
+    line-height: 1.42;
   }
 
   li {
-    margin-bottom: 2.5px;
+    margin-bottom: 2px;
   }
 
   /* Academic Journal Style Tables */
   table.data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 4px;
-    margin-bottom: 6px;
+    margin-top: 3px;
+    margin-bottom: 5px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 9pt;
-    line-height: 1.38;
+    font-size: 8.6pt;
+    line-height: 1.34;
   }
 
   table.data-table th, table.data-table td {
     border: 1px solid #cbd5e1;
-    padding: 4.5px 7px;
+    padding: 3.5px 6px;
     text-align: left;
     vertical-align: middle;
   }
@@ -235,9 +235,9 @@ def build_report_html():
   .badge {
     font-family: 'Times New Roman', Times, serif;
     display: inline-block;
-    padding: 2px 6px;
+    padding: 1.5px 5px;
     border-radius: 3px;
-    font-size: 8.2pt;
+    font-size: 7.8pt;
     font-weight: bold;
     letter-spacing: 0.2px;
   }
@@ -252,12 +252,12 @@ def build_report_html():
     background: #0f172a;
     color: #e2e8f0;
     font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
-    font-size: 7.4pt;
-    line-height: 1.30;
-    padding: 8px 11px;
+    font-size: 6.8pt;
+    line-height: 1.26;
+    padding: 6px 10px;
     border-radius: 4px;
     overflow: hidden;
-    margin: 4px 0 6px 0;
+    margin: 3px 0 5px 0;
     border: 1px solid #334155;
   }
 
@@ -273,20 +273,20 @@ def build_report_html():
     background: #020617;
     border: 1px solid #1e293b;
     border-radius: 4px;
-    padding: 7px 11px;
+    padding: 6px 10px;
     color: #38bdf8;
     font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
-    font-size: 7.8pt;
-    line-height: 1.38;
-    margin: 4px 0 6px 0;
+    font-size: 7.5pt;
+    line-height: 1.34;
+    margin: 4px 0 5px 0;
   }
 
   .terminal-header {
     color: #94a3b8;
     border-bottom: 1px solid #1e293b;
-    padding-bottom: 3px;
-    margin-bottom: 4px;
-    font-size: 7.4pt;
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+    font-size: 7pt;
     display: flex;
     justify-content: space-between;
     font-family: 'Times New Roman', Times, serif;
@@ -296,7 +296,7 @@ def build_report_html():
   /* Diagram & Image containers */
   .diagram-container {
     text-align: center;
-    margin: 4px 0 6px 0;
+    margin: 3px 0 4px 0;
   }
 
   .diagram-container svg {
@@ -309,7 +309,7 @@ def build_report_html():
     border-radius: 4px;
     overflow: hidden;
     background: #f8fafc;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .img-card img {
@@ -320,10 +320,10 @@ def build_report_html():
 
   .img-caption {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 8.5pt;
+    font-size: 8.2pt;
     font-style: italic;
     color: #334155;
-    padding: 3.5px 6px;
+    padding: 2.5px 5px;
     background: #f1f5f9;
     border-top: 1px solid #e2e8f0;
     text-align: center;
@@ -332,28 +332,28 @@ def build_report_html():
   .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 7px;
   }
 
   .callout {
     font-family: 'Times New Roman', Times, serif;
     background: #eff6ff;
     border-left: 3.5px solid #2563eb;
-    padding: 6px 10px;
+    padding: 5px 9px;
     border-radius: 0 4px 4px 0;
-    margin: 4px 0 6px 0;
-    font-size: 9.6pt;
+    margin: 3px 0 5px 0;
+    font-size: 9.4pt;
     color: #1e40af;
-    line-height: 1.45;
+    line-height: 1.42;
   }
 
   .math-box {
     background: #f8fafc;
     border: 1px solid #cbd5e1;
     border-radius: 4px;
-    padding: 5px 12px;
-    margin: 4px 0 6px 0;
-    font-size: 9.6pt;
+    padding: 4px 10px;
+    margin: 3px 0 5px 0;
+    font-size: 9.4pt;
     text-align: center;
     font-weight: bold;
     color: #0f172a;
@@ -551,7 +551,7 @@ def build_report_html():
 
         <h3 class="sub-heading">3.1 System Block Diagram</h3>
         <div class="diagram-container">
-          <svg viewBox="0 0 680 145" width="680" height="145" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 680 135" width="680" height="135" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="g-sensor" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
               <linearGradient id="g-mcu" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#0369a1"/></linearGradient>
@@ -562,68 +562,68 @@ def build_report_html():
             </defs>
 
             <!-- Layer 1: Sensor -->
-            <rect x="10" y="10" width="115" height="120" rx="6" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
-            <rect x="10" y="10" width="115" height="25" rx="6" fill="url(#g-sensor)"/>
-            <text x="67" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">SENSING LAYER</text>
-            <text x="67" y="55" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04 Sensor</text>
-            <text x="67" y="69" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
-            <text x="67" y="82" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">10µs Trig / Echo Out</text>
-            <text x="67" y="105" fill="#ef4444" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">1kΩ/2kΩ Divider</text>
+            <rect x="10" y="8" width="115" height="115" rx="6" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+            <rect x="10" y="8" width="115" height="24" rx="6" fill="url(#g-sensor)"/>
+            <text x="67" y="24" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">SENSING LAYER</text>
+            <text x="67" y="50" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04 Sensor</text>
+            <text x="67" y="64" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
+            <text x="67" y="77" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">10µs Trig / Echo Out</text>
+            <text x="67" y="98" fill="#ef4444" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">1kΩ/2kΩ Divider</text>
 
             <!-- Arrow 1 -->
-            <line x1="125" y1="70" x2="152" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="138" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">3.3V Echo</text>
+            <line x1="125" y1="65" x2="152" y2="65" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <text x="138" y="58" fill="#475569" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">3.3V Echo</text>
 
             <!-- Layer 2: MCU -->
-            <rect x="155" y="10" width="125" height="120" rx="6" fill="#f8fafc" stroke="#0284c7" stroke-width="2"/>
-            <rect x="155" y="10" width="125" height="25" rx="6" fill="url(#g-mcu)"/>
-            <text x="217" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">EDGE COMPUTING</text>
-            <text x="217" y="53" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 / ESP8266</text>
-            <text x="217" y="67" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• 5-Sample Median Filter</text>
-            <text x="217" y="80" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Fill % Math Logic</text>
-            <text x="217" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Tiered Classifier</text>
-            <text x="217" y="106" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• JSON Payload Builder</text>
+            <rect x="155" y="8" width="125" height="115" rx="6" fill="#f8fafc" stroke="#0284c7" stroke-width="2"/>
+            <rect x="155" y="8" width="125" height="24" rx="6" fill="url(#g-mcu)"/>
+            <text x="217" y="24" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">EDGE COMPUTING</text>
+            <text x="217" y="48" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 / ESP8266</text>
+            <text x="217" y="62" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• 5-Sample Median Filter</text>
+            <text x="217" y="75" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Fill % Math Logic</text>
+            <text x="217" y="88" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Tiered Classifier</text>
+            <text x="217" y="101" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• JSON Payload Builder</text>
 
             <!-- Arrow 2 -->
-            <line x1="280" y1="70" x2="307" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="294" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Wi-Fi</text>
+            <line x1="280" y1="65" x2="307" y2="65" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <text x="294" y="58" fill="#475569" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Wi-Fi</text>
 
             <!-- Layer 3: Network -->
-            <rect x="310" y="10" width="105" height="120" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
-            <rect x="310" y="10" width="105" height="25" rx="6" fill="url(#g-net)"/>
-            <text x="362" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GATEWAY LAYER</text>
-            <text x="362" y="55" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">802.11 b/g/n</text>
-            <text x="362" y="69" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">TCP/IP Network</text>
-            <text x="362" y="82" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST Client</text>
-            <text x="362" y="105" fill="#059669" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Auto-Reconnect</text>
+            <rect x="310" y="8" width="105" height="115" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
+            <rect x="310" y="8" width="105" height="24" rx="6" fill="url(#g-net)"/>
+            <text x="362" y="24" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GATEWAY LAYER</text>
+            <text x="362" y="50" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">802.11 b/g/n</text>
+            <text x="362" y="64" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">TCP/IP Network</text>
+            <text x="362" y="77" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST Client</text>
+            <text x="362" y="98" fill="#059669" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Auto-Reconnect</text>
 
             <!-- Arrow 3 -->
-            <line x1="415" y1="70" x2="442" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="428" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">REST API</text>
+            <line x1="415" y1="65" x2="442" y2="65" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <text x="428" y="58" fill="#475569" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">REST API</text>
 
             <!-- Layer 4: Cloud Backend -->
-            <rect x="445" y="10" width="115" height="120" rx="6" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
-            <rect x="445" y="10" width="115" height="25" rx="6" fill="url(#g-cloud)"/>
-            <text x="502" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">CLOUD BACKEND</text>
-            <text x="502" y="53" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Express Server</text>
-            <text x="502" y="67" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Ingestion REST API</text>
-            <text x="502" y="80" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Engine & Dedupe</text>
-            <text x="502" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Atomic JSON Database</text>
-            <text x="502" y="106" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Socket.IO Broadcaster</text>
+            <rect x="445" y="8" width="115" height="115" rx="6" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+            <rect x="445" y="8" width="115" height="24" rx="6" fill="url(#g-cloud)"/>
+            <text x="502" y="24" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">CLOUD BACKEND</text>
+            <text x="502" y="48" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Express Server</text>
+            <text x="502" y="62" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Ingestion REST API</text>
+            <text x="502" y="75" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Engine & Dedupe</text>
+            <text x="502" y="88" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Atomic JSON Database</text>
+            <text x="502" y="101" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Socket.IO Broadcaster</text>
 
             <!-- Arrow 4 -->
-            <line x1="560" y1="70" x2="582" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="571" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">WS Push</text>
+            <line x1="560" y1="65" x2="582" y2="65" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <text x="571" y="58" fill="#475569" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">WS Push</text>
 
             <!-- Layer 5: Dashboard -->
-            <rect x="585" y="10" width="85" height="120" rx="6" fill="#f8fafc" stroke="#d97706" stroke-width="2"/>
-            <rect x="585" y="10" width="85" height="25" rx="6" fill="url(#g-ui)"/>
-            <text x="627" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">OPERATOR UI</text>
-            <text x="627" y="53" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">React SPA</text>
-            <text x="627" y="67" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Live Fleet Map</text>
-            <text x="627" y="80" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Gauge Cards</text>
-            <text x="627" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Center</text>
-            <text x="627" y="106" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Dispatch Queue</text>
+            <rect x="585" y="8" width="85" height="115" rx="6" fill="#f8fafc" stroke="#d97706" stroke-width="2"/>
+            <rect x="585" y="8" width="85" height="24" rx="6" fill="url(#g-ui)"/>
+            <text x="627" y="24" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">OPERATOR UI</text>
+            <text x="627" y="48" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">React SPA</text>
+            <text x="627" y="62" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Live Fleet Map</text>
+            <text x="627" y="75" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Gauge Cards</text>
+            <text x="627" y="88" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Center</text>
+            <text x="627" y="101" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Dispatch Queue</text>
           </svg>
         </div>
       </div>
@@ -649,7 +649,7 @@ def build_report_html():
       <div class="page-body">
         <h3 class="sub-heading">3.2 System Operational Flowchart</h3>
         <div class="diagram-container">
-          <svg viewBox="0 0 680 185" width="680" height="185" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 680 180" width="680" height="180" xmlns="http://www.w3.org/2000/svg">
             <!-- Start -->
             <rect x="20" y="75" width="60" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
             <text x="50" y="93" fill="#ffffff" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">START</text>
@@ -708,10 +708,10 @@ def build_report_html():
             <text x="625" y="154" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Blink Activity LED</text>
 
             <!-- Delay & Loop Back -->
-            <line x1="625" y1="158" x2="625" y2="175" stroke="#475569" stroke-width="1.5"/>
-            <line x1="625" y1="175" x2="252" y2="175" stroke="#475569" stroke-width="1.5"/>
-            <line x1="252" y1="175" x2="252" y2="115" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="430" y="170" fill="#475569" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Delay 5000 ms (Periodic Heartbeat Telemetry Loop)</text>
+            <line x1="625" y1="158" x2="625" y2="172" stroke="#475569" stroke-width="1.5"/>
+            <line x1="625" y1="172" x2="252" y2="172" stroke="#475569" stroke-width="1.5"/>
+            <line x1="252" y1="172" x2="252" y2="115" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="430" y="167" fill="#475569" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Delay 5000 ms (Periodic Heartbeat Telemetry Loop)</text>
           </svg>
         </div>
 
@@ -751,86 +751,71 @@ def build_report_html():
 
         <h3 class="sub-heading">4.1 Wokwi Simulation Circuit Schematic</h3>
         <div class="diagram-container">
-          <svg viewBox="0 0 680 165" width="680" height="165" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 680 150" width="680" height="150" xmlns="http://www.w3.org/2000/svg">
             <!-- Background Breadboard Guide -->
-            <rect x="15" y="8" width="650" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+            <rect x="15" y="6" width="650" height="138" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 
             <!-- HC-SR04 Block -->
-            <rect x="35" y="22" width="130" height="115" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
-            <circle cx="65" cy="62" r="22" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
-            <circle cx="135" cy="62" r="22" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
-            <text x="65" y="65" fill="#94a3b8" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRANSMIT</text>
-            <text x="135" y="65" fill="#94a3b8" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RECEIVE</text>
-            <text x="100" y="104" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
-            <text x="100" y="116" fill="#38bdf8" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40kHz Ultrasonic</text>
+            <rect x="35" y="16" width="130" height="110" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <circle cx="65" cy="54" r="20" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+            <circle cx="135" cy="54" r="20" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+            <text x="65" y="57" fill="#94a3b8" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRANSMIT</text>
+            <text x="135" y="57" fill="#94a3b8" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RECEIVE</text>
+            <text x="100" y="93" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
+            <text x="100" y="104" fill="#38bdf8" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">40kHz Ultrasonic</text>
 
             <!-- Pins on HC-SR04 -->
-            <!-- VCC -->
-            <circle cx="45" cy="137" r="3.5" fill="#ef4444"/>
-            <text x="45" y="132" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
-            <!-- TRIG -->
-            <circle cx="75" cy="137" r="3.5" fill="#3b82f6"/>
-            <text x="75" y="132" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
-            <!-- ECHO -->
-            <circle cx="115" cy="137" r="3.5" fill="#10b981"/>
-            <text x="115" y="132" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
-            <!-- GND -->
-            <circle cx="155" cy="137" r="3.5" fill="#000000"/>
-            <text x="155" y="132" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <circle cx="45" cy="122" r="3.5" fill="#ef4444"/>
+            <text x="45" y="117" fill="#f87171" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
+            <circle cx="75" cy="122" r="3.5" fill="#3b82f6"/>
+            <text x="75" y="117" fill="#93c5fd" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
+            <circle cx="115" cy="122" r="3.5" fill="#10b981"/>
+            <text x="115" y="117" fill="#6ee7b7" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
+            <circle cx="155" cy="122" r="3.5" fill="#000000"/>
+            <text x="155" y="117" fill="#94a3b8" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
             <!-- ESP32 DevKit Block -->
-            <rect x="470" y="18" width="180" height="130" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
-            <rect x="520" y="23" width="80" height="22" rx="3" fill="#334155"/>
-            <text x="560" y="38" fill="#e2e8f0" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
-            <text x="560" y="59" fill="#60a5fa" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
-            <text x="560" y="71" fill="#94a3b8" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
+            <rect x="470" y="14" width="180" height="122" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
+            <rect x="520" y="19" width="80" height="20" rx="3" fill="#334155"/>
+            <text x="560" y="33" fill="#e2e8f0" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
+            <text x="560" y="52" fill="#60a5fa" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
+            <text x="560" y="63" fill="#94a3b8" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
 
             <!-- MCU Pin Callouts -->
-            <rect x="475" y="86" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="497" y="95" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
+            <rect x="475" y="78" width="45" height="12" fill="#1e293b" rx="2"/>
+            <text x="497" y="87" fill="#f87171" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
 
-            <rect x="475" y="104" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="497" y="113" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <rect x="475" y="94" width="45" height="12" fill="#1e293b" rx="2"/>
+            <text x="497" y="103" fill="#94a3b8" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
-            <rect x="475" y="122" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="497" y="131" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
+            <rect x="475" y="110" width="45" height="12" fill="#1e293b" rx="2"/>
+            <text x="497" y="119" fill="#93c5fd" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
 
-            <rect x="535" y="122" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="557" y="131" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
+            <rect x="535" y="110" width="45" height="12" fill="#1e293b" rx="2"/>
+            <text x="557" y="119" fill="#6ee7b7" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
 
             <!-- Voltage Divider Box -->
-            <rect x="255" y="42" width="150" height="80" rx="6" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <text x="330" y="58" fill="#7e22ce" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
+            <rect x="255" y="34" width="150" height="76" rx="6" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <text x="330" y="49" fill="#7e22ce" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
 
             <!-- Resistor R1 -->
-            <rect x="275" y="70" width="35" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="292" y="79" fill="#0f172a" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
+            <rect x="275" y="60" width="35" height="11" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="292" y="68" fill="#0f172a" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
 
             <!-- Resistor R2 -->
-            <rect x="345" y="94" width="35" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="362" y="103" fill="#0f172a" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
+            <rect x="345" y="82" width="35" height="11" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="362" y="90" fill="#0f172a" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
 
             <!-- Wiring Paths -->
-            <!-- VCC Wire (Red) -->
-            <path d="M 45 137 L 45 150 L 430 150 L 430 92 L 475 92" fill="none" stroke="#ef4444" stroke-width="1.8"/>
-
-            <!-- GND Wire (Black) -->
-            <path d="M 155 137 L 155 144 L 440 144 L 440 110 L 475 110" fill="none" stroke="#0f172a" stroke-width="1.8"/>
-
-            <!-- TRIG Wire (Blue) -->
-            <path d="M 75 137 L 75 128 L 230 128 L 230 128 L 475 128" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
-
-            <!-- ECHO to R1 (Green) -->
-            <path d="M 115 137 L 115 76 L 275 76" fill="none" stroke="#10b981" stroke-width="1.8"/>
-            <text x="180" y="71" fill="#059669" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
-
-            <!-- R1 to Midpoint to MCU D27 (Purple) -->
-            <path d="M 310 76 L 335 76 L 335 128 L 535 128" fill="none" stroke="#9333ea" stroke-width="1.8"/>
-            <text x="415" y="124" fill="#7e22ce" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
-
-            <!-- Midpoint to R2 to GND -->
-            <path d="M 335 76 L 335 100 L 345 100" fill="none" stroke="#9333ea" stroke-width="1.5"/>
-            <path d="M 380 100 L 400 100 L 400 110 L 440 110" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+            <path d="M 45 122 L 45 134 L 430 134 L 430 84 L 475 84" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+            <path d="M 155 122 L 155 129 L 440 129 L 440 100 L 475 100" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+            <path d="M 75 122 L 75 116 L 230 116 L 230 116 L 475 116" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+            <path d="M 115 122 L 115 65 L 275 65" fill="none" stroke="#10b981" stroke-width="1.8"/>
+            <text x="180" y="60" fill="#059669" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
+            <path d="M 310 65 L 335 65 L 335 116 L 535 116" fill="none" stroke="#9333ea" stroke-width="1.8"/>
+            <text x="415" y="112" fill="#7e22ce" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
+            <path d="M 335 65 L 335 87 L 345 87" fill="none" stroke="#9333ea" stroke-width="1.5"/>
+            <path d="M 380 87 L 400 87 L 400 100 L 440 100" fill="none" stroke="#0f172a" stroke-width="1.5"/>
           </svg>
         </div>
 
@@ -1156,9 +1141,9 @@ def build_report_html():
 
         <h3 class="sub-heading">6.1 Wokwi Hardware Simulation Setup & Online Project Link</h3>
         <p>The interactive Wokwi simulation emulates the physical ESP32 DevKit V1 wired to an HC-SR04 ultrasonic transducer with the 1kΩ/2kΩ voltage divider. Users can interactively adjust the target obstacle distance slider in Wokwi from 2 cm to 400 cm to simulate waste filling up the container.</p>
-        <div class="callout" style="margin-bottom: 6px;">
+        <div class="callout" style="margin-bottom: 5px;">
           <strong>Interactive Simulation URL:</strong> <a href="https://wokwi.com/projects/smartbin-iot-esp32-waste-monitor" style="color: #2563eb; text-decoration: underline; font-weight: bold;">https://wokwi.com/projects/smartbin-iot-esp32-waste-monitor</a><br>
-          <span style="font-size: 8pt; color: #475569;">Local Simulation Execution: Run <code>npm run wokwi:build</code> followed by launching Wokwi simulation runner with <code>wokwi.toml</code> and <code>diagram.json</code>.</span>
+          <span style="font-size: 7.8pt; color: #475569;">Local Simulation Execution: Run <code>npm run wokwi:build</code> followed by launching Wokwi simulation runner with <code>wokwi.toml</code> and <code>diagram.json</code>.</span>
         </div>
 
         <h3 class="sub-heading">6.2 Microcontroller Serial Monitor Telemetry Stream</h3>
@@ -1373,7 +1358,6 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
 def main():
     html_content = build_report_html()
     html_file = "SmartBin_Project_Report.html"
-    pdf_file = "SmartBin_Project_Report.pdf"
     report_pdf = "REPORT.pdf"
 
     with open(html_file, "w", encoding="utf-8") as f:
@@ -1382,7 +1366,7 @@ def main():
 
     chrome_path = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
     abs_html = os.path.abspath(html_file)
-    abs_pdf = os.path.abspath(pdf_file)
+    abs_pdf = os.path.abspath(report_pdf)
 
     cmd = [
         chrome_path,
@@ -1393,13 +1377,12 @@ def main():
         f"file:///{abs_html.replace(os.sep, '/')}"
     ]
 
-    print("Running Chrome headless...")
+    print("Running Chrome headless to compile REPORT.pdf...")
     subprocess.run(cmd, check=True)
 
     if os.path.exists(abs_pdf):
-        shutil.copyfile(abs_pdf, report_pdf)
         reader = pypdf.PdfReader(abs_pdf)
-        print(f"SUCCESS: Generated {pdf_file} and {report_pdf}")
+        print(f"SUCCESS: Generated {report_pdf}")
         print(f"Total Pages: {len(reader.pages)}")
         print(f"File Size: {os.path.getsize(abs_pdf)/1024:.1f} KB")
 
