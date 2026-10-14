@@ -10,14 +10,14 @@
       "urgent_threshold": 95,
       "distance_cm": -1,
       "fill_percentage": null,
-      "status": "SENSOR ERROR",
+      "status": "OFFLINE",
       "sensor_valid": false,
-      "is_online": true,
-      "priority": 3,
-      "action": "MAINTENANCE REQUIRED: Sensor timeout or invalid reading. Check HC-SR04 transducer & wiring.",
+      "is_online": false,
+      "priority": 4,
+      "action": "COMMUNICATION FAILURE: ESP8266 node offline. Check power supply and Wi-Fi signal strength.",
       "last_reading_time": "2026-10-14T17:26:03.567Z",
       "created_at": "2026-10-09T14:51:33.590Z",
-      "updated_at": "2026-10-14T17:26:03.567Z"
+      "updated_at": "2026-10-14T17:40:49.052Z"
     },
     {
       "id": "BIN-002",
@@ -7018,6 +7018,18 @@
     }
   ],
   "alerts": [
+    {
+      "id": "ALT-1791999649053-wjskb",
+      "is_resolved": false,
+      "created_at": "2026-10-14T17:40:49.053Z",
+      "resolved_at": null,
+      "bin_id": "BIN-001",
+      "type": "DEVICE_OFFLINE",
+      "severity": "warning",
+      "message": "Communication Lost: Bin BIN-001 at Main Campus Gate has gone offline.",
+      "location": "Main Campus Gate",
+      "fill_percentage": null
+    },
     {
       "id": "ALT-1791998763567-rvotf",
       "is_resolved": false,
