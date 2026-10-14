@@ -1,13 +1,12 @@
 """
-SmartBin IoT Project - Professional Academic PDF Report Generator
-Applies Times New Roman typography throughout, clean font hierarchy,
-proper line spacing, justified alignment, neat margins on all four sides,
-and a publication-grade academic aesthetic.
-
-Outputs:
-- SmartBin_Project_Report.pdf
-- REPORT.pdf
-- SmartBin_Project_Report.html
+SmartBin IoT Project - High-Legibility Academic PDF Report Generator
+Features:
+- Increased font size (10.5pt body text, 14pt headings, 18pt title) for maximum readability and visual impact
+- Times New Roman typography throughout
+- Expanded multi-page layout (11 pages) with generous breathing room
+- Exact solid rectangular border frame with consistent margins on every single page matching user's image
+- Crisp high-resolution SVG diagrams and embedded dashboard screenshots
+- Outputs both REPORT.pdf and SmartBin_Project_Report.pdf
 """
 
 import os
@@ -15,12 +14,8 @@ import shutil
 import subprocess
 import pypdf
 
-def generate_report():
-    html_path = "SmartBin_Project_Report.html"
-    pdf_path = "SmartBin_Project_Report.pdf"
-    report_pdf_path = "REPORT.pdf"
-
-    html = """<!DOCTYPE html>
+def build_report_html():
+    return """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -39,13 +34,13 @@ def generate_report():
     padding: 0;
   }
 
-  /* Universal Academic Times New Roman Styling */
+  /* Universal Academic Times New Roman Typography with Increased Legibility */
   body {
     font-family: 'Times New Roman', Times, 'Nimbus Roman No9 L', serif;
     color: #111827;
     background: #ffffff;
-    line-height: 1.38;
-    font-size: 8.8pt;
+    line-height: 1.48;
+    font-size: 10.2pt;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -89,10 +84,10 @@ def generate_report():
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 3px;
-    margin-bottom: 7px;
+    padding-bottom: 3.5px;
+    margin-bottom: 8px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 7.5pt;
+    font-size: 8.5pt;
     font-style: italic;
     color: #4b5563;
   }
@@ -102,10 +97,10 @@ def generate_report():
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #cbd5e1;
-    padding-top: 3px;
-    margin-top: 5px;
+    padding-top: 3.5px;
+    margin-top: 6px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 7.5pt;
+    font-size: 8.5pt;
     color: #4b5563;
   }
 
@@ -117,21 +112,21 @@ def generate_report():
   /* Document Titles */
   h1.report-main-title {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14.5pt;
+    font-size: 16.5pt;
     font-weight: bold;
     color: #0f172a;
     line-height: 1.25;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     letter-spacing: -0.2px;
     text-align: center;
   }
 
   .report-subtitle {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 8.8pt;
+    font-size: 10.2pt;
     font-style: italic;
     color: #1d4ed8;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     text-align: center;
   }
 
@@ -139,20 +134,20 @@ def generate_report():
   .meta-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 6px;
     background: #f8fafc;
     border: 1px solid #cbd5e1;
     border-radius: 3px;
-    padding: 5px 8px;
-    margin-bottom: 7px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 7.5pt;
+    font-size: 8.5pt;
   }
 
   .meta-item strong {
     display: block;
     color: #475569;
-    font-size: 6.8pt;
+    font-size: 7.5pt;
     text-transform: uppercase;
     letter-spacing: 0.3px;
   }
@@ -165,60 +160,63 @@ def generate_report():
   /* Academic Section Headings */
   h2.section-heading {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 11pt;
+    font-size: 13.2pt;
     font-weight: bold;
     color: #0f172a;
-    border-bottom: 1.5px solid #1e293b;
-    padding-bottom: 2px;
-    margin-top: 5px;
-    margin-bottom: 4px;
+    border-bottom: 1.8px solid #1e293b;
+    padding-bottom: 3px;
+    margin-top: 7px;
+    margin-bottom: 5px;
     letter-spacing: -0.1px;
   }
 
   h3.sub-heading {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 9pt;
+    font-size: 10.8pt;
     font-weight: bold;
     color: #1e293b;
-    margin-top: 4px;
-    margin-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 3px;
   }
 
   p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 8.5pt;
+    font-size: 10pt;
     color: #1e293b;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.48;
   }
 
   ul, ol {
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 15px;
-    margin-bottom: 4px;
-    font-size: 8.3pt;
+    margin-left: 18px;
+    margin-bottom: 5px;
+    font-size: 9.8pt;
     color: #1e293b;
     text-align: justify;
+    line-height: 1.45;
   }
 
   li {
-    margin-bottom: 2px;
+    margin-bottom: 2.5px;
   }
 
   /* Academic Journal Style Tables */
   table.data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 3px;
-    margin-bottom: 5px;
+    margin-top: 4px;
+    margin-bottom: 6px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 7.6pt;
+    font-size: 9pt;
+    line-height: 1.38;
   }
 
   table.data-table th, table.data-table td {
     border: 1px solid #cbd5e1;
-    padding: 3.5px 5.5px;
+    padding: 4.5px 7px;
     text-align: left;
     vertical-align: middle;
   }
@@ -227,7 +225,7 @@ def generate_report():
     background: #f1f5f9;
     color: #0f172a;
     font-weight: bold;
-    border-bottom: 1.5px solid #475569;
+    border-bottom: 1.8px solid #334155;
   }
 
   table.data-table tr:nth-child(even) td {
@@ -237,9 +235,9 @@ def generate_report():
   .badge {
     font-family: 'Times New Roman', Times, serif;
     display: inline-block;
-    padding: 1px 4px;
-    border-radius: 2px;
-    font-size: 7pt;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 8.2pt;
     font-weight: bold;
     letter-spacing: 0.2px;
   }
@@ -254,12 +252,12 @@ def generate_report():
     background: #0f172a;
     color: #e2e8f0;
     font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
-    font-size: 6.2pt;
-    line-height: 1.25;
-    padding: 6px 8px;
-    border-radius: 3px;
+    font-size: 7.4pt;
+    line-height: 1.30;
+    padding: 8px 11px;
+    border-radius: 4px;
     overflow: hidden;
-    margin: 2px 0 4px 0;
+    margin: 4px 0 6px 0;
     border: 1px solid #334155;
   }
 
@@ -274,21 +272,21 @@ def generate_report():
   .terminal-box {
     background: #020617;
     border: 1px solid #1e293b;
-    border-radius: 3px;
-    padding: 5px 8px;
+    border-radius: 4px;
+    padding: 7px 11px;
     color: #38bdf8;
     font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
-    font-size: 6.5pt;
-    line-height: 1.30;
-    margin: 3px 0 5px 0;
+    font-size: 7.8pt;
+    line-height: 1.38;
+    margin: 4px 0 6px 0;
   }
 
   .terminal-header {
     color: #94a3b8;
     border-bottom: 1px solid #1e293b;
-    padding-bottom: 2px;
-    margin-bottom: 3px;
-    font-size: 6.2pt;
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+    font-size: 7.4pt;
     display: flex;
     justify-content: space-between;
     font-family: 'Times New Roman', Times, serif;
@@ -298,7 +296,7 @@ def generate_report():
   /* Diagram & Image containers */
   .diagram-container {
     text-align: center;
-    margin: 2px 0 4px 0;
+    margin: 4px 0 6px 0;
   }
 
   .diagram-container svg {
@@ -308,10 +306,10 @@ def generate_report():
 
   .img-card {
     border: 1px solid #cbd5e1;
-    border-radius: 3px;
+    border-radius: 4px;
     overflow: hidden;
     background: #f8fafc;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   .img-card img {
@@ -322,10 +320,10 @@ def generate_report():
 
   .img-caption {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 7.2pt;
+    font-size: 8.5pt;
     font-style: italic;
     color: #334155;
-    padding: 2.5px 5px;
+    padding: 3.5px 6px;
     background: #f1f5f9;
     border-top: 1px solid #e2e8f0;
     text-align: center;
@@ -334,27 +332,28 @@ def generate_report():
   .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    gap: 8px;
   }
 
   .callout {
     font-family: 'Times New Roman', Times, serif;
     background: #eff6ff;
-    border-left: 3px solid #2563eb;
-    padding: 4px 8px;
-    border-radius: 0 3px 3px 0;
-    margin: 3px 0 4px 0;
-    font-size: 8pt;
+    border-left: 3.5px solid #2563eb;
+    padding: 6px 10px;
+    border-radius: 0 4px 4px 0;
+    margin: 4px 0 6px 0;
+    font-size: 9.6pt;
     color: #1e40af;
+    line-height: 1.45;
   }
 
   .math-box {
     background: #f8fafc;
     border: 1px solid #cbd5e1;
-    border-radius: 3px;
-    padding: 3px 8px;
-    margin-bottom: 3px;
-    font-size: 7.8pt;
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin: 4px 0 6px 0;
+    font-size: 9.6pt;
     text-align: center;
     font-weight: bold;
     color: #0f172a;
@@ -365,7 +364,7 @@ def generate_report():
 <body>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 1: AIM AND PROBLEM STATEMENT -->
+  <!-- PAGE 1: TITLE & SECTION 1 (AIM & OBJECTIVES) -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
@@ -402,7 +401,27 @@ def generate_report():
           <li><strong>Wireless Cloud Transmission:</strong> Package telemetry into lightweight JSON payloads and transmit over 802.11 b/g/n Wi-Fi via HTTP POST to a centralized municipal server with automatic network reconnection logic.</li>
           <li><strong>Municipal Operations Dashboard:</strong> Provide municipal operators with an interactive dashboard featuring live bin metrics, geographical distribution, trend analytics, alert deduplication, and historical logs.</li>
         </ul>
+      </div>
 
+      <div class="frame-footer">
+        <span>SmartBin: IoT Waste Monitoring System</span>
+        <span>Section 1: Aim & Objectives</span>
+        <span class="page-num">Page 1 of 11</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 2: REAL-WORLD NEED & SECTION 2 (HARDWARE COMPONENTS) -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="page-frame">
+      <div class="frame-header">
+        <span>SmartBin IoT — Problem Analysis & Hardware Components</span>
+        <span>Technical Project Report</span>
+      </div>
+
+      <div class="page-body">
         <h3 class="sub-heading">1.4 Real-World Need and Municipal Sanitation Motivation</h3>
         <p>Conventional municipal solid waste management practices rely heavily on static, predetermined collection routes and calendar schedules (e.g., trucks visiting designated sectors every 48 hours regardless of actual bin volume). This legacy paradigm introduces severe operational and environmental liabilities:</p>
         <ul>
@@ -413,27 +432,7 @@ def generate_report():
         <div class="callout">
           <strong>The Solution:</strong> SmartBin transforms conventional passive waste receptacles into intelligent, connected IoT nodes that broadcast actionable telemetry, allowing municipalities to switch from inefficient static schedules to dynamically optimized, demand-responsive collection routes.
         </div>
-      </div>
 
-      <div class="frame-footer">
-        <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 1: Aim & Problem Statement</span>
-        <span class="page-num">Page 1 of 8</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================= -->
-  <!-- PAGE 2: COMPONENTS AND TOOLS -->
-  <!-- ========================================================================= -->
-  <div class="page">
-    <div class="page-frame">
-      <div class="frame-header">
-        <span>SmartBin IoT — Hardware & Software Architecture</span>
-        <span>Technical Project Report</span>
-      </div>
-
-      <div class="page-body">
         <h2 class="section-heading">2. Components and Tools</h2>
         <p>The SmartBin architecture bridges physical edge sensing, signal conditioning, wireless microcontroller processing, cloud ingestion, and real-time operator interfaces. Each hardware and software element is selected to ensure high measurement reliability, electrical safety, and seamless cloud connectivity.</p>
 
@@ -443,31 +442,31 @@ def generate_report():
             <tr>
               <th style="width: 22%;">Component Name</th>
               <th style="width: 18%;">Category / Model</th>
-              <th style="width: 20%;">Key Specifications</th>
-              <th style="width: 40%;">Engineering Purpose & Operational Role</th>
+              <th style="width: 22%;">Key Specifications</th>
+              <th style="width: 38%;">Engineering Purpose & Operational Role</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>HC-SR04 Ultrasonic Sensor</strong></td>
               <td>Acoustic Transducer Module</td>
-              <td>Operating Freq: 40 kHz<br>Range: 2 cm to 400 cm<br>Resolution: 0.3 cm<br>Supply: 5V DC, &lt;15 mA</td>
+              <td>Freq: 40 kHz<br>Range: 2 cm to 400 cm<br>Resolution: 0.3 cm<br>Supply: 5V DC, &lt;15 mA</td>
               <td>Mounted on underside of bin lid facing downwards. Emits 8-cycle ultrasonic bursts and measures round-trip time-of-flight to non-invasively measure trash surface distance without contact fouling.</td>
             </tr>
             <tr>
               <td><strong>ESP32 DevKit V1</strong></td>
-              <td>Microcontroller Board (Simulation Target)</td>
-              <td>Tensilica Xtensa Dual-Core 32-bit LX6 @ 240 MHz<br>520 KB SRAM, 802.11 b/g/n<br>GPIO Logic: 3.3V</td>
+              <td>Microcontroller (Simulation Target)</td>
+              <td>Xtensa Dual-Core 32-bit LX6 @ 240 MHz<br>520 KB SRAM, 802.11 b/g/n<br>GPIO Logic: 3.3V</td>
               <td>Acts as the primary edge computing node in the Wokwi simulation environment. Drives trigger pulses, captures microsecond echo timing, runs median filter, computes fill %, and issues HTTP POST telemetry.</td>
             </tr>
             <tr>
               <td><strong>ESP8266 NodeMCU v2</strong></td>
-              <td>Microcontroller Board (Physical Target)</td>
+              <td>Microcontroller (Physical Target)</td>
               <td>Tensilica L106 32-bit @ 80/160 MHz, 4MB Flash<br>802.11 b/g/n Wi-Fi<br>GPIO Logic: 3.3V</td>
               <td>Cost-effective edge node target for physical municipal deployment. Handles autonomous sensor polling, median noise rejection, local status classification, and Wi-Fi transmission.</td>
             </tr>
             <tr>
-              <td><strong>Resistive Voltage Divider (1kΩ / 2kΩ)</strong></td>
+              <td><strong>Resistive Voltage Divider</strong></td>
               <td>Passive Signal Conditioning</td>
               <td>R1 = 1 kΩ (1/4W, 1%)<br>R2 = 2 kΩ (1/4W, 1%)<br>Ratio: 2/(1+2) = 0.667</td>
               <td>Level-shifts the 5V logic ECHO pulse from the HC-SR04 down to a safe 3.33 V level (5V * 0.667 = 3.33V) before connecting to MCU GPIO pins, completely preventing overvoltage damage.</td>
@@ -480,14 +479,34 @@ def generate_report():
             </tr>
           </tbody>
         </table>
+      </div>
 
+      <div class="frame-footer">
+        <span>SmartBin: IoT Waste Monitoring System</span>
+        <span>Section 1.4 & 2.1: Hardware Components</span>
+        <span class="page-num">Page 2 of 11</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 3: SOFTWARE PLATFORMS & SYSTEM BLOCK DIAGRAM -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="page-frame">
+      <div class="frame-header">
+        <span>SmartBin IoT — Software Stack & Block Diagram</span>
+        <span>Technical Project Report</span>
+      </div>
+
+      <div class="page-body">
         <h3 class="sub-heading">2.2 Software Platforms and Toolchain Ecosystem</h3>
         <table class="data-table">
           <thead>
             <tr>
-              <th style="width: 22%;">Software / Tool</th>
-              <th style="width: 20%;">Environment / Stack</th>
-              <th style="width: 58%;">Engineering Purpose & Operational Value</th>
+              <th style="width: 24%;">Software / Tool</th>
+              <th style="width: 22%;">Environment / Stack</th>
+              <th style="width: 54%;">Engineering Purpose & Operational Value</th>
             </tr>
           </thead>
           <tbody>
@@ -526,27 +545,7 @@ def generate_report():
 
         <h3 class="sub-heading">2.3 Edge Computing Architecture Rationale</h3>
         <p>Rather than streaming unvalidated raw pulse timings to the cloud, SmartBin executes edge intelligence directly on the microcontroller. By applying multi-sample median sorting and boundary validation locally, the device minimizes cloud bandwidth, eliminates erroneous telemetry triggers caused by temporary acoustic reflections, and ensures autonomous local fail-safe operation during network blackouts.</p>
-      </div>
 
-      <div class="frame-footer">
-        <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 2: Components & Tools</span>
-        <span class="page-num">Page 2 of 8</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================= -->
-  <!-- PAGE 3: BLOCK DIAGRAM AND FLOWCHART -->
-  <!-- ========================================================================= -->
-  <div class="page">
-    <div class="page-frame">
-      <div class="frame-header">
-        <span>SmartBin IoT — System Architecture & Flow Logic</span>
-        <span>Technical Project Report</span>
-      </div>
-
-      <div class="page-body">
         <h2 class="section-heading">3. Block Diagram and Flowchart</h2>
         <p>The system is organized into modular layers spanning physical sensing, edge microcontroller signal processing, wireless transmission, cloud backend aggregation, and real-time operator interfaces.</p>
 
@@ -565,134 +564,154 @@ def generate_report():
             <!-- Layer 1: Sensor -->
             <rect x="10" y="10" width="115" height="120" rx="6" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
             <rect x="10" y="10" width="115" height="25" rx="6" fill="url(#g-sensor)"/>
-            <text x="67" y="27" fill="#ffffff" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">SENSING LAYER</text>
-            <text x="67" y="55" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04 Sensor</text>
-            <text x="67" y="69" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
-            <text x="67" y="82" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">10µs Trig / Echo Out</text>
-            <text x="67" y="105" fill="#ef4444" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">1kΩ/2kΩ Divider</text>
+            <text x="67" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">SENSING LAYER</text>
+            <text x="67" y="55" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04 Sensor</text>
+            <text x="67" y="69" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
+            <text x="67" y="82" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">10µs Trig / Echo Out</text>
+            <text x="67" y="105" fill="#ef4444" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">1kΩ/2kΩ Divider</text>
 
             <!-- Arrow 1 -->
             <line x1="125" y1="70" x2="152" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="138" y="63" fill="#475569" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">3.3V Echo</text>
+            <text x="138" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">3.3V Echo</text>
 
             <!-- Layer 2: MCU -->
             <rect x="155" y="10" width="125" height="120" rx="6" fill="#f8fafc" stroke="#0284c7" stroke-width="2"/>
             <rect x="155" y="10" width="125" height="25" rx="6" fill="url(#g-mcu)"/>
-            <text x="217" y="27" fill="#ffffff" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">EDGE COMPUTING</text>
-            <text x="217" y="53" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 / ESP8266</text>
-            <text x="217" y="67" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• 5-Sample Median Filter</text>
-            <text x="217" y="80" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Fill % Math Logic</text>
-            <text x="217" y="93" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Tiered Classifier</text>
-            <text x="217" y="106" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• JSON Payload Builder</text>
+            <text x="217" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">EDGE COMPUTING</text>
+            <text x="217" y="53" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 / ESP8266</text>
+            <text x="217" y="67" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• 5-Sample Median Filter</text>
+            <text x="217" y="80" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Fill % Math Logic</text>
+            <text x="217" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Tiered Classifier</text>
+            <text x="217" y="106" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• JSON Payload Builder</text>
 
             <!-- Arrow 2 -->
             <line x1="280" y1="70" x2="307" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="294" y="63" fill="#475569" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Wi-Fi</text>
+            <text x="294" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Wi-Fi</text>
 
             <!-- Layer 3: Network -->
             <rect x="310" y="10" width="105" height="120" rx="6" fill="#f8fafc" stroke="#059669" stroke-width="2"/>
             <rect x="310" y="10" width="105" height="25" rx="6" fill="url(#g-net)"/>
-            <text x="362" y="27" fill="#ffffff" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GATEWAY LAYER</text>
-            <text x="362" y="55" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">802.11 b/g/n</text>
-            <text x="362" y="69" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">TCP/IP Network</text>
-            <text x="362" y="82" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST Client</text>
-            <text x="362" y="105" fill="#059669" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Auto-Reconnect</text>
+            <text x="362" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GATEWAY LAYER</text>
+            <text x="362" y="55" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">802.11 b/g/n</text>
+            <text x="362" y="69" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">TCP/IP Network</text>
+            <text x="362" y="82" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST Client</text>
+            <text x="362" y="105" fill="#059669" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Auto-Reconnect</text>
 
             <!-- Arrow 3 -->
             <line x1="415" y1="70" x2="442" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="428" y="63" fill="#475569" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">REST API</text>
+            <text x="428" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">REST API</text>
 
             <!-- Layer 4: Cloud Backend -->
             <rect x="445" y="10" width="115" height="120" rx="6" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
             <rect x="445" y="10" width="115" height="25" rx="6" fill="url(#g-cloud)"/>
-            <text x="502" y="27" fill="#ffffff" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">CLOUD BACKEND</text>
-            <text x="502" y="53" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Express Server</text>
-            <text x="502" y="67" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Ingestion REST API</text>
-            <text x="502" y="80" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Engine & Dedupe</text>
-            <text x="502" y="93" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Atomic JSON Database</text>
-            <text x="502" y="106" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Socket.IO Broadcaster</text>
+            <text x="502" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">CLOUD BACKEND</text>
+            <text x="502" y="53" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Express Server</text>
+            <text x="502" y="67" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Ingestion REST API</text>
+            <text x="502" y="80" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Engine & Dedupe</text>
+            <text x="502" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Atomic JSON Database</text>
+            <text x="502" y="106" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Socket.IO Broadcaster</text>
 
             <!-- Arrow 4 -->
             <line x1="560" y1="70" x2="582" y2="70" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
-            <text x="571" y="63" fill="#475569" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">WS Push</text>
+            <text x="571" y="63" fill="#475569" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">WS Push</text>
 
             <!-- Layer 5: Dashboard -->
             <rect x="585" y="10" width="85" height="120" rx="6" fill="#f8fafc" stroke="#d97706" stroke-width="2"/>
             <rect x="585" y="10" width="85" height="25" rx="6" fill="url(#g-ui)"/>
-            <text x="627" y="27" fill="#ffffff" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">OPERATOR UI</text>
-            <text x="627" y="53" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">React SPA</text>
-            <text x="627" y="67" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Live Fleet Map</text>
-            <text x="627" y="80" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Gauge Cards</text>
-            <text x="627" y="93" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Center</text>
-            <text x="627" y="106" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Dispatch Queue</text>
+            <text x="627" y="27" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">OPERATOR UI</text>
+            <text x="627" y="53" fill="#0f172a" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">React SPA</text>
+            <text x="627" y="67" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Live Fleet Map</text>
+            <text x="627" y="80" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Gauge Cards</text>
+            <text x="627" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Alert Center</text>
+            <text x="627" y="106" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">• Dispatch Queue</text>
           </svg>
         </div>
+      </div>
 
+      <div class="frame-footer">
+        <span>SmartBin: IoT Waste Monitoring System</span>
+        <span>Section 2.2 & 3.1: Block Diagram</span>
+        <span class="page-num">Page 3 of 11</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 4: OPERATIONAL FLOWCHART & MATHEMATICAL FORMULATION -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="page-frame">
+      <div class="frame-header">
+        <span>SmartBin IoT — Flowchart & Mathematical Modeling</span>
+        <span>Technical Project Report</span>
+      </div>
+
+      <div class="page-body">
         <h3 class="sub-heading">3.2 System Operational Flowchart</h3>
         <div class="diagram-container">
-          <svg viewBox="0 0 680 180" width="680" height="180" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 680 185" width="680" height="185" xmlns="http://www.w3.org/2000/svg">
             <!-- Start -->
-            <rect x="20" y="75" width="60" height="26" rx="13" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-            <text x="50" y="91" fill="#ffffff" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">START</text>
-            <line x1="80" y1="88" x2="102" y2="88" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <rect x="20" y="75" width="60" height="28" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+            <text x="50" y="93" fill="#ffffff" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">START</text>
+            <line x1="80" y1="89" x2="102" y2="89" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
 
             <!-- Setup -->
-            <rect x="105" y="65" width="80" height="46" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
-            <text x="145" y="81" fill="#0f172a" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Init System</text>
-            <text x="145" y="93" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">GPIO / Serial 115k</text>
-            <text x="145" y="104" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Connect Wi-Fi</text>
-            <line x1="185" y1="88" x2="207" y2="88" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <rect x="105" y="65" width="80" height="48" rx="4" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+            <text x="145" y="82" fill="#0f172a" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Init System</text>
+            <text x="145" y="94" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">GPIO / Serial 115k</text>
+            <text x="145" y="105" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">Connect Wi-Fi</text>
+            <line x1="185" y1="89" x2="207" y2="89" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
 
             <!-- Measure 5 Samples -->
-            <rect x="210" y="65" width="85" height="46" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
-            <text x="252" y="80" fill="#1e40af" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Sonic Sampling</text>
-            <text x="252" y="92" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Send 10µs Trig</text>
-            <text x="252" y="103" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Collect 5 Pings</text>
-            <line x1="295" y1="88" x2="317" y2="88" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <rect x="210" y="65" width="85" height="48" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="252" y="81" fill="#1e40af" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Sonic Sampling</text>
+            <text x="252" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">Send 10µs Trig</text>
+            <text x="252" y="104" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">Collect 5 Pings</text>
+            <line x1="295" y1="89" x2="317" y2="89" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
 
             <!-- Median Filter -->
-            <rect x="320" y="65" width="80" height="46" rx="4" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
-            <text x="360" y="80" fill="#3730a3" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Median Filter</text>
-            <text x="360" y="92" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Sort 5 Samples</text>
-            <text x="360" y="103" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Pick Index 2</text>
-            <line x1="400" y1="88" x2="422" y2="88" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <rect x="320" y="65" width="80" height="48" rx="4" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+            <text x="360" y="81" fill="#3730a3" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Median Filter</text>
+            <text x="360" y="93" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">Sort 5 Samples</text>
+            <text x="360" y="104" fill="#475569" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">Pick Index 2</text>
+            <line x1="400" y1="89" x2="422" y2="89" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
 
             <!-- Decision: Valid Distance? -->
-            <polygon points="455,65 488,88 455,111 422,88" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-            <text x="455" y="85" fill="#92400e" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Distance</text>
-            <text x="455" y="95" fill="#92400e" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">&gt; 0 &amp; &le; 50?</text>
+            <polygon points="455,65 488,89 455,113 422,89" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+            <text x="455" y="86" fill="#92400e" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Distance</text>
+            <text x="455" y="96" fill="#92400e" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">&gt; 0 &amp; &le; 50?</text>
 
             <!-- No: SENSOR ERROR -->
             <line x1="455" y1="65" x2="455" y2="30" stroke="#dc2626" stroke-width="1.5"/>
             <line x1="455" y1="30" x2="515" y2="30" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="466" y="47" fill="#dc2626" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">NO</text>
-            <rect x="518" y="16" width="80" height="28" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
-            <text x="558" y="29" fill="#991b1b" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Flag Sensor Error</text>
-            <text x="558" y="39" fill="#991b1b" font-size="6.2" font-family="'Times New Roman', Times, serif" text-anchor="middle">Fill % = null</text>
+            <text x="466" y="47" fill="#dc2626" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif">NO</text>
+            <rect x="518" y="15" width="80" height="30" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+            <text x="558" y="29" fill="#991b1b" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Flag Sensor Error</text>
+            <text x="558" y="40" fill="#991b1b" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Fill % = null</text>
 
             <!-- Yes: Compute Fill % -->
-            <line x1="488" y1="88" x2="515" y2="88" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="500" y="81" fill="#16a34a" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">YES</text>
-            <rect x="518" y="68" width="80" height="40" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
-            <text x="558" y="83" fill="#166534" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Compute Fill %</text>
-            <text x="558" y="94" fill="#166534" font-size="6" font-family="'Times New Roman', Times, serif" text-anchor="middle">Tier Classification</text>
-            <text x="558" y="103" fill="#166534" font-size="6" font-family="'Times New Roman', Times, serif" text-anchor="middle">LOW/MED/HIGH/FULL</text>
+            <line x1="488" y1="89" x2="515" y2="89" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="500" y="82" fill="#16a34a" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif">YES</text>
+            <rect x="518" y="68" width="80" height="42" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+            <text x="558" y="83" fill="#166534" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Compute Fill %</text>
+            <text x="558" y="94" fill="#166534" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Tier Classification</text>
+            <text x="558" y="104" fill="#166534" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">LOW/MED/HIGH/FULL</text>
 
             <!-- Merge to JSON POST -->
             <line x1="598" y1="30" x2="625" y2="30" stroke="#475569" stroke-width="1.5"/>
             <line x1="625" y1="30" x2="625" y2="120" stroke="#475569" stroke-width="1.5"/>
-            <line x1="598" y1="88" x2="625" y2="88" stroke="#475569" stroke-width="1.5"/>
+            <line x1="598" y1="89" x2="625" y2="89" stroke="#475569" stroke-width="1.5"/>
 
-            <rect x="585" y="120" width="80" height="36" rx="4" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
-            <text x="625" y="134" fill="#6b21a8" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST</text>
-            <text x="625" y="144" fill="#475569" font-size="6.2" font-family="'Times New Roman', Times, serif" text-anchor="middle">JSON to /api/bins/data</text>
-            <text x="625" y="152" fill="#475569" font-size="6" font-family="'Times New Roman', Times, serif" text-anchor="middle">Blink Activity LED</text>
+            <rect x="585" y="120" width="80" height="38" rx="4" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
+            <text x="625" y="135" fill="#6b21a8" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST</text>
+            <text x="625" y="146" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">JSON to /api/bins/data</text>
+            <text x="625" y="154" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Blink Activity LED</text>
 
             <!-- Delay & Loop Back -->
-            <line x1="625" y1="156" x2="625" y2="170" stroke="#475569" stroke-width="1.5"/>
-            <line x1="625" y1="170" x2="252" y2="170" stroke="#475569" stroke-width="1.5"/>
-            <line x1="252" y1="170" x2="252" y2="114" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
-            <text x="430" y="165" fill="#475569" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Delay 5000 ms (Periodic Heartbeat Loop)</text>
+            <line x1="625" y1="158" x2="625" y2="175" stroke="#475569" stroke-width="1.5"/>
+            <line x1="625" y1="175" x2="252" y2="175" stroke="#475569" stroke-width="1.5"/>
+            <line x1="252" y1="175" x2="252" y2="115" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <text x="430" y="170" fill="#475569" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Delay 5000 ms (Periodic Heartbeat Telemetry Loop)</text>
           </svg>
         </div>
 
@@ -705,23 +724,24 @@ def generate_report():
         <div class="math-box">
           Fill Percentage (%) = clamp( ((D_empty - D_measured) / (D_empty - D_full)) * 100,  0.0,  100.0 )
         </div>
+        <p>This formulation ensures that readings below the full limit (5 cm) are clamped cleanly to 100.0%, preventing erroneous percentages above 100%, while readings near the empty boundary are stabilized at 0.0%.</p>
       </div>
 
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 3: Block Diagram & Flowchart</span>
-        <span class="page-num">Page 3 of 8</span>
+        <span>Section 3.2 & 3.3: Flowchart & Math Modeling</span>
+        <span class="page-num">Page 4 of 11</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 4: CIRCUIT DIAGRAM -->
+  <!-- PAGE 5: CIRCUIT DIAGRAM & PIN CONNECTIONS -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
       <div class="frame-header">
-        <span>SmartBin IoT — Schematic Wiring & Interconnections</span>
+        <span>SmartBin IoT — Circuit Wiring & Pin Mapping</span>
         <span>Technical Project Report</span>
       </div>
 
@@ -731,86 +751,86 @@ def generate_report():
 
         <h3 class="sub-heading">4.1 Wokwi Simulation Circuit Schematic</h3>
         <div class="diagram-container">
-          <svg viewBox="0 0 680 170" width="680" height="170" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 680 165" width="680" height="165" xmlns="http://www.w3.org/2000/svg">
             <!-- Background Breadboard Guide -->
-            <rect x="15" y="10" width="650" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+            <rect x="15" y="8" width="650" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 
             <!-- HC-SR04 Block -->
-            <rect x="35" y="25" width="130" height="115" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
-            <circle cx="65" cy="65" r="22" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
-            <circle cx="135" cy="65" r="22" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
-            <text x="65" y="68" fill="#94a3b8" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRANSMIT</text>
-            <text x="135" y="68" fill="#94a3b8" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RECEIVE</text>
-            <text x="100" y="107" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
-            <text x="100" y="119" fill="#38bdf8" font-size="6.4" font-family="'Times New Roman', Times, serif" text-anchor="middle">40kHz Ultrasonic</text>
+            <rect x="35" y="22" width="130" height="115" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <circle cx="65" cy="62" r="22" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+            <circle cx="135" cy="62" r="22" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+            <text x="65" y="65" fill="#94a3b8" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRANSMIT</text>
+            <text x="135" y="65" fill="#94a3b8" font-size="7" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RECEIVE</text>
+            <text x="100" y="104" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
+            <text x="100" y="116" fill="#38bdf8" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40kHz Ultrasonic</text>
 
             <!-- Pins on HC-SR04 -->
             <!-- VCC -->
-            <circle cx="45" cy="140" r="3.5" fill="#ef4444"/>
-            <text x="45" y="135" fill="#f87171" font-size="6" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
+            <circle cx="45" cy="137" r="3.5" fill="#ef4444"/>
+            <text x="45" y="132" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
             <!-- TRIG -->
-            <circle cx="75" cy="140" r="3.5" fill="#3b82f6"/>
-            <text x="75" y="135" fill="#93c5fd" font-size="6" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
+            <circle cx="75" cy="137" r="3.5" fill="#3b82f6"/>
+            <text x="75" y="132" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
             <!-- ECHO -->
-            <circle cx="115" cy="140" r="3.5" fill="#10b981"/>
-            <text x="115" y="135" fill="#6ee7b7" font-size="6" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
+            <circle cx="115" cy="137" r="3.5" fill="#10b981"/>
+            <text x="115" y="132" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
             <!-- GND -->
-            <circle cx="155" cy="140" r="3.5" fill="#000000"/>
-            <text x="155" y="135" fill="#94a3b8" font-size="6" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <circle cx="155" cy="137" r="3.5" fill="#000000"/>
+            <text x="155" y="132" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
             <!-- ESP32 DevKit Block -->
-            <rect x="470" y="20" width="180" height="130" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
-            <rect x="520" y="25" width="80" height="22" rx="3" fill="#334155"/>
-            <text x="560" y="40" fill="#e2e8f0" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
-            <text x="560" y="61" fill="#60a5fa" font-size="8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
-            <text x="560" y="73" fill="#94a3b8" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
+            <rect x="470" y="18" width="180" height="130" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
+            <rect x="520" y="23" width="80" height="22" rx="3" fill="#334155"/>
+            <text x="560" y="38" fill="#e2e8f0" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
+            <text x="560" y="59" fill="#60a5fa" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
+            <text x="560" y="71" fill="#94a3b8" font-size="7" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
 
             <!-- MCU Pin Callouts -->
-            <rect x="475" y="88" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="497" y="97" fill="#f87171" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
+            <rect x="475" y="86" width="45" height="13" fill="#1e293b" rx="2"/>
+            <text x="497" y="95" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
 
-            <rect x="475" y="106" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="497" y="115" fill="#94a3b8" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <rect x="475" y="104" width="45" height="13" fill="#1e293b" rx="2"/>
+            <text x="497" y="113" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
-            <rect x="475" y="124" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="497" y="133" fill="#93c5fd" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
+            <rect x="475" y="122" width="45" height="13" fill="#1e293b" rx="2"/>
+            <text x="497" y="131" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
 
-            <rect x="535" y="124" width="45" height="13" fill="#1e293b" rx="2"/>
-            <text x="557" y="133" fill="#6ee7b7" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
+            <rect x="535" y="122" width="45" height="13" fill="#1e293b" rx="2"/>
+            <text x="557" y="131" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
 
             <!-- Voltage Divider Box -->
-            <rect x="255" y="45" width="150" height="80" rx="6" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <text x="330" y="61" fill="#7e22ce" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
+            <rect x="255" y="42" width="150" height="80" rx="6" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <text x="330" y="58" fill="#7e22ce" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
 
             <!-- Resistor R1 -->
-            <rect x="275" y="73" width="35" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="292" y="82" fill="#0f172a" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
+            <rect x="275" y="70" width="35" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="292" y="79" fill="#0f172a" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
 
             <!-- Resistor R2 -->
-            <rect x="345" y="97" width="35" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="362" y="106" fill="#0f172a" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
+            <rect x="345" y="94" width="35" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="362" y="103" fill="#0f172a" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
 
             <!-- Wiring Paths -->
             <!-- VCC Wire (Red) -->
-            <path d="M 45 140 L 45 153 L 430 153 L 430 94 L 475 94" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+            <path d="M 45 137 L 45 150 L 430 150 L 430 92 L 475 92" fill="none" stroke="#ef4444" stroke-width="1.8"/>
 
             <!-- GND Wire (Black) -->
-            <path d="M 155 140 L 155 147 L 440 147 L 440 112 L 475 112" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+            <path d="M 155 137 L 155 144 L 440 144 L 440 110 L 475 110" fill="none" stroke="#0f172a" stroke-width="1.8"/>
 
             <!-- TRIG Wire (Blue) -->
-            <path d="M 75 140 L 75 130 L 230 130 L 230 130 L 475 130" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+            <path d="M 75 137 L 75 128 L 230 128 L 230 128 L 475 128" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
 
             <!-- ECHO to R1 (Green) -->
-            <path d="M 115 140 L 115 79 L 275 79" fill="none" stroke="#10b981" stroke-width="1.8"/>
-            <text x="180" y="74" fill="#059669" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
+            <path d="M 115 137 L 115 76 L 275 76" fill="none" stroke="#10b981" stroke-width="1.8"/>
+            <text x="180" y="71" fill="#059669" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
 
             <!-- R1 to Midpoint to MCU D27 (Purple) -->
-            <path d="M 310 79 L 335 79 L 335 130 L 535 130" fill="none" stroke="#9333ea" stroke-width="1.8"/>
-            <text x="415" y="126" fill="#7e22ce" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
+            <path d="M 310 76 L 335 76 L 335 128 L 535 128" fill="none" stroke="#9333ea" stroke-width="1.8"/>
+            <text x="415" y="124" fill="#7e22ce" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
 
             <!-- Midpoint to R2 to GND -->
-            <path d="M 335 79 L 335 103 L 345 103" fill="none" stroke="#9333ea" stroke-width="1.5"/>
-            <path d="M 380 103 L 400 103 L 400 112 L 440 112" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+            <path d="M 335 76 L 335 100 L 345 100" fill="none" stroke="#9333ea" stroke-width="1.5"/>
+            <path d="M 380 100 L 400 100 L 400 110 L 440 110" fill="none" stroke="#0f172a" stroke-width="1.5"/>
           </svg>
         </div>
 
@@ -888,13 +908,13 @@ def generate_report():
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
         <span>Section 4: Circuit Diagram & Pin Connections</span>
-        <span class="page-num">Page 4 of 8</span>
+        <span class="page-num">Page 5 of 11</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 5: PROGRAM CODE PART 1 -->
+  <!-- PAGE 6: PROGRAM CODE PART 1 -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
@@ -983,13 +1003,13 @@ def generate_report():
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
         <span>Section 5: Program Code (Part 1)</span>
-        <span class="page-num">Page 5 of 8</span>
+        <span class="page-num">Page 6 of 11</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 6: PROGRAM CODE PART 2 & THRESHOLDS -->
+  <!-- PAGE 7: PROGRAM CODE PART 2 & THRESHOLDS -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
@@ -1115,13 +1135,13 @@ def generate_report():
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
         <span>Section 5: Program Code (Part 2)</span>
-        <span class="page-num">Page 6 of 8</span>
+        <span class="page-num">Page 7 of 11</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 7: SIMULATION AND IOT OUTPUT -->
+  <!-- PAGE 8: SIMULATION & SERIAL MONITOR & OVERVIEW DASHBOARD -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
@@ -1136,9 +1156,9 @@ def generate_report():
 
         <h3 class="sub-heading">6.1 Wokwi Hardware Simulation Setup & Online Project Link</h3>
         <p>The interactive Wokwi simulation emulates the physical ESP32 DevKit V1 wired to an HC-SR04 ultrasonic transducer with the 1kΩ/2kΩ voltage divider. Users can interactively adjust the target obstacle distance slider in Wokwi from 2 cm to 400 cm to simulate waste filling up the container.</p>
-        <div class="callout" style="margin-bottom: 5px;">
+        <div class="callout" style="margin-bottom: 6px;">
           <strong>Interactive Simulation URL:</strong> <a href="https://wokwi.com/projects/smartbin-iot-esp32-waste-monitor" style="color: #2563eb; text-decoration: underline; font-weight: bold;">https://wokwi.com/projects/smartbin-iot-esp32-waste-monitor</a><br>
-          <span style="font-size: 7.2pt; color: #475569;">Local Simulation Execution: Run <code>npm run wokwi:build</code> followed by launching Wokwi simulation runner with <code>wokwi.toml</code> and <code>diagram.json</code>.</span>
+          <span style="font-size: 8pt; color: #475569;">Local Simulation Execution: Run <code>npm run wokwi:build</code> followed by launching Wokwi simulation runner with <code>wokwi.toml</code> and <code>diagram.json</code>.</span>
         </div>
 
         <h3 class="sub-heading">6.2 Microcontroller Serial Monitor Telemetry Stream</h3>
@@ -1160,7 +1180,7 @@ def generate_report():
 [Reading 5] distance=5.8 cm, fill=97.7%, status=FULL | [HTTP] POST Result Code: 200 (Critical Alert)
         </div>
 
-        <h3 class="sub-heading">6.3 Municipal Operations Cloud Dashboard (Live Interfaces)</h3>
+        <h3 class="sub-heading">6.3 Municipal Operations Cloud Dashboard (Primary Panels)</h3>
         <div class="grid-2">
           <div class="img-card">
             <img src="report_assets/dashboard_overview.png" alt="SmartBin Cloud Overview Dashboard">
@@ -1171,6 +1191,29 @@ def generate_report():
             <div class="img-caption">Figure 6.2: Live Bin Monitoring — Visual Fill Levels, Battery Status & Action Recommendation</div>
           </div>
         </div>
+      </div>
+
+      <div class="frame-footer">
+        <span>SmartBin: IoT Waste Monitoring System</span>
+        <span>Section 6: Simulation & Telemetry Outputs</span>
+        <span class="page-num">Page 8 of 11</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 9: SIMULATION LAB, ALERTS CENTER & THINGSPEAK CLOUD -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="page-frame">
+      <div class="frame-header">
+        <span>SmartBin IoT — Simulation Lab & Cloud Ingestion</span>
+        <span>Technical Project Report</span>
+      </div>
+
+      <div class="page-body">
+        <h3 class="sub-heading">6.4 Autonomous City-Wide Simulation Lab & Alert Management Center</h3>
+        <p>The municipal dashboard features an integrated software simulation engine that allows operators to stress-test collection dispatch routines by simulating rapid fill-rate surges, Wi-Fi disconnections, and sensor blind-zone faults across a simulated 6-bin municipal network.</p>
 
         <div class="grid-2">
           <div class="img-card">
@@ -1182,23 +1225,30 @@ def generate_report():
             <div class="img-caption">Figure 6.4: Alert Management Center — Critical Overflow Triggers & Audit Trail</div>
           </div>
         </div>
+
+        <h3 class="sub-heading">6.5 ThingSpeak & External Cloud IoT Integration</h3>
+        <p>In addition to the dedicated Node.js/React municipal platform, SmartBin supports direct telemetry egress to public IoT analytical clouds such as MathWorks ThingSpeak. Telemetry can be directed to ThingSpeak channels using standard HTTP GET/POST queries formatted as follows:</p>
+        <div class="terminal-box" style="margin-top: 3px;">
+GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31.2&amp;field2=25.1&amp;field3=LOW&amp;status=BIN-001
+        </div>
+        <p>ThingSpeak automatically logs historical trends, generates publicly embeddable capacity charts, and can trigger automated SMS/email dispatch alerts to sanitation supervisors via MATLAB Analysis webhooks when <code>field2 &gt;= 80</code>.</p>
       </div>
 
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 6: Simulation & IoT Output</span>
-        <span class="page-num">Page 7 of 8</span>
+        <span>Section 6.4 & 6.5: Simulation & Cloud Channels</span>
+        <span class="page-num">Page 9 of 11</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 8: RESULTS, TESTING, CONCLUSION & FUTURE SCOPE -->
+  <!-- PAGE 10: RESULTS AND TESTING -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
       <div class="frame-header">
-        <span>SmartBin IoT — Experimental Validation & Outlook</span>
+        <span>SmartBin IoT — Experimental Validation & Test Results</span>
         <span>Technical Project Report</span>
       </div>
 
@@ -1263,8 +1313,29 @@ def generate_report():
         </table>
 
         <h3 class="sub-heading">7.2 Alert Deduplication and Stale Node Recovery Results</h3>
-        <p>Integration testing verified that repeated incoming telemetry packets with fill level &ge; 95% did not flood the database with duplicate alert records; the system maintains exactly one active alert per condition until the bin is physically emptied (fill drops below 80%), at which point the alert is automatically resolved. Stale device monitoring automatically flagged nodes as <code>OFFLINE</code> if no telemetry was received within 60 seconds.</p>
+        <p>Integration testing verified that repeated incoming telemetry packets with fill level &ge; 95% did not flood the database with duplicate alert records; the system maintains exactly one active alert per condition until the bin is physically emptied (fill drops below 80%), at which point the alert is automatically resolved.</p>
+        <p>Furthermore, the stale device monitor actively scans all registered containers every 5 seconds. If a sensor node fails to report within 60 seconds (due to battery exhaustion, antenna obstruction, or Wi-Fi gateway dropout), the server automatically transitions the bin's state to <code>OFFLINE</code>, changes its map pin color to neutral gray, and logs a communication fault alert.</p>
+      </div>
 
+      <div class="frame-footer">
+        <span>SmartBin: IoT Waste Monitoring System</span>
+        <span>Section 7: Results and Testing</span>
+        <span class="page-num">Page 10 of 11</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE 11: CONCLUSION, APPLICATIONS AND FUTURE SCOPE -->
+  <!-- ========================================================================= -->
+  <div class="page">
+    <div class="page-frame">
+      <div class="frame-header">
+        <span>SmartBin IoT — Outlook & Future Scope</span>
+        <span>Technical Project Report</span>
+      </div>
+
+      <div class="page-body">
         <h2 class="section-heading">8. Conclusion, Applications and Future Scope</h2>
 
         <h3 class="sub-heading">8.1 Conclusion</h3>
@@ -1289,8 +1360,8 @@ def generate_report():
 
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 7 & 8: Results, Conclusion & Future Scope</span>
-        <span class="page-num">Page 8 of 8</span>
+        <span>Section 8: Conclusion & Future Scope</span>
+        <span class="page-num">Page 11 of 11</span>
       </div>
     </div>
   </div>
@@ -1299,16 +1370,22 @@ def generate_report():
 </html>
 """
 
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f"Generated {html_path}")
+def main():
+    html_content = build_report_html()
+    html_file = "SmartBin_Project_Report.html"
+    pdf_file = "SmartBin_Project_Report.pdf"
+    report_pdf = "REPORT.pdf"
 
-    chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
-    abs_html = os.path.abspath(html_path)
-    abs_pdf = os.path.abspath(pdf_path)
+    with open(html_file, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"Written updated HTML to {html_file}")
+
+    chrome_path = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    abs_html = os.path.abspath(html_file)
+    abs_pdf = os.path.abspath(pdf_file)
 
     cmd = [
-        chrome,
+        chrome_path,
         "--headless=new",
         "--disable-gpu",
         "--no-pdf-header-footer",
@@ -1316,16 +1393,15 @@ def generate_report():
         f"file:///{abs_html.replace(os.sep, '/')}"
     ]
 
+    print("Running Chrome headless...")
     subprocess.run(cmd, check=True)
-    
+
     if os.path.exists(abs_pdf):
-        # Also create REPORT.pdf as an exact copy
-        shutil.copyfile(abs_pdf, report_pdf_path)
+        shutil.copyfile(abs_pdf, report_pdf)
         reader = pypdf.PdfReader(abs_pdf)
-        print(f"Compiled PDF: {abs_pdf}")
-        print(f"Copied to: {report_pdf_path}")
+        print(f"SUCCESS: Generated {pdf_file} and {report_pdf}")
         print(f"Total Pages: {len(reader.pages)}")
-        print(f"File Size: {os.path.getsize(abs_pdf) / 1024:.1f} KB")
+        print(f"File Size: {os.path.getsize(abs_pdf)/1024:.1f} KB")
 
 if __name__ == "__main__":
-    generate_report()
+    main()
