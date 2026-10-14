@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "SmartBin Municipal IoT Project",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic",
+      "top": -150,
+      "left": 40,
+      "attrs": { "distance": "22.5" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -30,
+      "left": 160,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 20,
+      "left": 160,
+      "attrs": { "value": "2000" }
+    }
+  ],
+  "connections": [
+    [ "ultrasonic:VCC", "esp:VIN", "red", [ "v0" ] ],
+    [ "ultrasonic:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ultrasonic:TRIG", "esp:D14", "blue", [ "v0" ] ],
+    [ "ultrasonic:ECHO", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "esp:D27", "green", [ "v0" ] ],
+    [ "r1:2", "r2:1", "purple", [ "v0" ] ],
+    [ "r2:2", "esp:GND.2", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

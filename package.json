@@ -1,0 +1,30 @@
+{
+  "name": "smartbin-iot",
+  "version": "1.0.0",
+  "description": "SmartBin — IoT-Enabled Garbage Bin Monitoring and Municipal Dashboard",
+  "main": "backend/server.js",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "server": "npm start --prefix backend",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "simulate": "node simulation/sensorSimulator.js",
+    "firmware:build": "arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware/garbage_bin --output-dir firmware/build && node -e \"require('fs').copyFileSync('firmware/build/garbage_bin.ino.bin','firmware/build/firmware.bin');require('fs').copyFileSync('firmware/build/garbage_bin.ino.elf','firmware/build/firmware.elf');\"",
+    "wokwi:build": "arduino-cli compile --fqbn esp32:esp32:esp32 simulation/wokwi --output-dir simulation/build",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "iot",
+    "esp8266",
+    "smart-city",
+    "garbage-monitoring",
+    "ultrasonic-sensor",
+    "wokwi"
+  ],
+  "author": "SmartBin Engineering Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
