@@ -16,7 +16,10 @@ import './styles/dashboard.css';
 import './styles/simulator.css';
 
 export default function App() {
-  const [activeView, setActiveView] = useState('overview');
+  const [activeView, setActiveView] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('view') || 'overview';
+  });
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   const {
