@@ -821,43 +821,43 @@ def build_report_html():
             <rect x="10" y="4" width="660" height="112" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
 
             <!-- HC-SR04 Block -->
-            <rect x="25" y="10" width="145" height="98" rx="5" fill="#1e293b" stroke="#0f172a" stroke-width="1.8"/>
-            <circle cx="60" cy="40" r="17" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
-            <circle cx="135" cy="40" r="17" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
-            <text x="60" y="43" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TX</text>
-            <text x="135" y="43" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RX</text>
-            <text x="97" y="68" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
-            <text x="97" y="79" fill="#38bdf8" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
+            <rect x="25" y="10" width="145" height="98" rx="5" fill="#ffffff" stroke="#1e293b" stroke-width="1.8"/>
+            <circle cx="60" cy="40" r="17" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+            <circle cx="135" cy="40" r="17" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+            <text x="60" y="43" fill="#0f172a" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TX</text>
+            <text x="135" y="43" fill="#0f172a" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RX</text>
+            <text x="97" y="68" fill="#0f172a" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
+            <text x="97" y="79" fill="#1e40af" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
 
             <!-- Pins on HC-SR04 -->
             <circle cx="42" cy="100" r="3" fill="#ef4444"/>
-            <text x="42" y="94" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
+            <text x="42" y="94" fill="#dc2626" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
             <circle cx="78" cy="100" r="3" fill="#3b82f6"/>
-            <text x="78" y="94" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
+            <text x="78" y="94" fill="#1d4ed8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
             <circle cx="118" cy="100" r="3" fill="#10b981"/>
-            <text x="118" y="94" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
+            <text x="118" y="94" fill="#047857" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
             <circle cx="152" cy="100" r="3" fill="#000000"/>
-            <text x="152" y="94" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <text x="152" y="94" fill="#334155" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
             <!-- ESP32 DevKit Block -->
-            <rect x="475" y="10" width="180" height="98" rx="5" fill="#0f172a" stroke="#2563eb" stroke-width="1.8"/>
-            <rect x="525" y="14" width="80" height="14" rx="2" fill="#334155"/>
-            <text x="565" y="25" fill="#e2e8f0" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
-            <text x="565" y="42" fill="#60a5fa" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
-            <text x="565" y="53" fill="#94a3b8" font-size="7.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
+            <rect x="475" y="10" width="180" height="98" rx="5" fill="#ffffff" stroke="#1e293b" stroke-width="1.8"/>
+            <rect x="525" y="14" width="80" height="14" rx="2" fill="#f1f5f9" stroke="#94a3b8"/>
+            <text x="565" y="25" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
+            <text x="565" y="42" fill="#1e40af" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
+            <text x="565" y="53" fill="#475569" font-size="7.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
 
             <!-- MCU Pin Callouts -->
-            <rect x="480" y="62" width="46" height="11" fill="#1e293b" rx="2"/>
-            <text x="503" y="70" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
+            <rect x="480" y="62" width="46" height="11" fill="#f1f5f9" stroke="#cbd5e1" rx="2"/>
+            <text x="503" y="70" fill="#dc2626" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
 
-            <rect x="480" y="76" width="46" height="11" fill="#1e293b" rx="2"/>
-            <text x="503" y="84" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <rect x="480" y="76" width="46" height="11" fill="#f1f5f9" stroke="#cbd5e1" rx="2"/>
+            <text x="503" y="84" fill="#334155" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
-            <rect x="480" y="90" width="46" height="11" fill="#1e293b" rx="2"/>
-            <text x="503" y="98" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
+            <rect x="480" y="90" width="46" height="11" fill="#f1f5f9" stroke="#cbd5e1" rx="2"/>
+            <text x="503" y="98" fill="#1d4ed8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
 
-            <rect x="538" y="90" width="46" height="11" fill="#1e293b" rx="2"/>
-            <text x="561" y="98" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
+            <rect x="538" y="90" width="46" height="11" fill="#f1f5f9" stroke="#cbd5e1" rx="2"/>
+            <text x="561" y="98" fill="#047857" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
 
             <!-- Voltage Divider Box -->
             <rect x="235" y="24" width="180" height="66" rx="5" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.3" stroke-dasharray="4,2"/>
@@ -1560,31 +1560,33 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
         <p>Experimental validation confirmed 100% detection of high-fill states, zero false alert flooding, and seamless real-time visualization on the municipal dashboard. The system directly addresses urban sanitation inefficiencies, eliminating uncontained sidewalk overflows while drastically trimming municipal vehicle operating costs.</p>
 
         <h3 class="sub-heading">8.2 Real-World Municipal and Commercial Applications</h3>
-        <ul style="margin-bottom: 4px;">
-          <li><strong>Smart Cities &amp; Municipalities:</strong> City-wide deployment on public waste receptacles to dynamically route garbage compactors, saving up to 35% in fuel and vehicle maintenance costs.</li>
-          <li><strong>Educational &amp; Corporate Campuses:</strong> Automated sanitation tracking across large multi-building complexes (cafeterias, lecture halls, residential dormitories) to maintain clean campus environments.</li>
-          <li><strong>Healthcare Facilities &amp; Hospitals:</strong> Non-contact monitoring of biohazard waste receptacles with automated disposal alerts to ensure strict hygiene compliance.</li>
-          <li><strong>Commercial Malls &amp; Transit Hubs:</strong> Airports, train terminals, and shopping centers optimize janitorial staffing by cleaning bins only when capacity reaches threshold levels.</li>
+        <ul style="margin-left: 20px; margin-bottom: 3px;">
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Smart Cities &amp; Municipalities:</strong> City-wide deployment on public waste receptacles to dynamically route garbage compactors, saving up to 35% in fuel and vehicle maintenance costs.</li>
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Educational &amp; Corporate Campuses:</strong> Automated sanitation tracking across large multi-building complexes (cafeterias, lecture halls, residential dormitories) to maintain clean campus environments.</li>
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Healthcare Facilities &amp; Hospitals:</strong> Non-contact monitoring of biohazard waste receptacles with automated disposal alerts to ensure strict hygiene compliance.</li>
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Commercial Malls &amp; Transit Hubs:</strong> Airports, train terminals, and shopping centers optimize janitorial staffing by cleaning bins only when capacity reaches threshold levels.</li>
         </ul>
 
         <h3 class="sub-heading">8.3 Future Technological Enhancements</h3>
-        <ul style="margin-bottom: 6px;">
-          <li><strong>Multi-Sensor Fusion (Odour &amp; Fire Detection):</strong> Integrate an MQ-135 air quality gas sensor (detecting methane CH4, ammonia NH3) and a DHT22 temperature sensor to detect decomposing organic decay and early smoldering fire hazards.</li>
-          <li><strong>AI Dynamic Vehicle Routing Problem (VRP):</strong> Connect the backend alert engine to the Google Maps Distance Matrix API and genetic route-optimization algorithms to dynamically recompute optimal turn-by-turn truck navigation paths based on real-time bin priority rankings.</li>
-          <li><strong>Long-Range LPWAN (LoRaWAN / NB-IoT):</strong> Replace Wi-Fi with LoRaWAN (868/915 MHz) or NB-IoT cellular modules to enable multi-kilometer transmission ranges with battery lives exceeding 5 years on a single charge.</li>
-          <li><strong>Solar Energy Harvesting &amp; Deep Sleep:</strong> Equip bins with a compact 5V solar panel, 18650 Li-ion battery, and deep-sleep cycling (waking for 200 ms every 5 minutes) for self-sustaining off-grid operation.</li>
+        <ul style="margin-left: 20px; margin-bottom: 3px;">
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Multi-Sensor Fusion (Odour &amp; Fire Detection):</strong> Integrate an MQ-135 air quality gas sensor (detecting methane CH4, ammonia NH3) and a DHT22 temperature sensor to detect decomposing organic decay and early smoldering fire hazards.</li>
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>AI Dynamic Vehicle Routing Problem (VRP):</strong> Connect the backend alert engine to the Google Maps Distance Matrix API and genetic route-optimization algorithms to dynamically recompute optimal turn-by-turn truck navigation paths based on real-time bin priority rankings.</li>
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Long-Range LPWAN (LoRaWAN / NB-IoT):</strong> Replace Wi-Fi with LoRaWAN (868/915 MHz) or NB-IoT cellular modules to enable multi-kilometer transmission ranges with battery lives exceeding 5 years on a single charge.</li>
+          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Solar Energy Harvesting &amp; Deep Sleep:</strong> Equip bins with a compact 5V solar panel, 18650 Li-ion battery, and deep-sleep cycling (waking for 200 ms every 5 minutes) for self-sustaining off-grid operation.</li>
         </ul>
 
-        <div style="margin-top: 6px; border-top: 1px dashed #cbd5e1; padding-top: 4px; display: flex; justify-content: space-between; font-size: 9.5pt; color: #334155;">
-          <div style="width: 48%;">
-            <strong>Student / Author Signature:</strong> _______________________<br>
-            <span>Date: ________________________</span>
-          </div>
-          <div style="width: 48%; text-align: right;">
-            <strong>Faculty / Evaluator Signature:</strong> _______________________<br>
-            <span>Grade &amp; Comments: ________________________</span>
-          </div>
-        </div>
+        <table style="width: 100%; border: 1px dashed #94a3b8; margin-top: 4px; font-family: 'Times New Roman', Times, serif; font-size: 9.2pt; color: #0f172a; border-collapse: collapse;">
+          <tr>
+            <td style="width: 50%; padding: 4px 8px; vertical-align: top; border-right: 1px dashed #94a3b8;">
+              <strong>Student / Author Signature:</strong> _______________________<br>
+              <span style="font-size: 8.8pt; color: #475569;">Date: ________________________</span>
+            </td>
+            <td style="width: 50%; padding: 4px 8px; vertical-align: top;">
+              <strong>Faculty / Evaluator Signature:</strong> _______________________<br>
+              <span style="font-size: 8.8pt; color: #475569;">Grade &amp; Comments: ________________________</span>
+            </td>
+          </tr>
+        </table>
       </div>
 
       <div class="frame-footer">
