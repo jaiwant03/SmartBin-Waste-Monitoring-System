@@ -17,29 +17,30 @@
     padding: 0;
   }
 
-  /* Universal Academic Times New Roman Typography with 12pt Body & 13-14pt Headings */
+  /* Universal Academic Typography: Times New Roman, 12pt Body */
   body {
-    font-family: 'Times New Roman', Times, 'Nimbus Roman No9 L', serif;
-    color: #111827;
+    font-family: 'Times New Roman', Times, 'Nimbus Roman No9 L', Georgia, serif;
+    color: #0f172a;
     background: #ffffff;
-    line-height: 1.45;
+    line-height: 1.42;
     font-size: 12.0pt;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  /* Page container with 12mm outer margin matching reference border frame */
+  /* Page container with 10mm top/bottom, 12mm side margin for precise A4 print */
   .page {
     width: 210mm;
     height: 297mm;
     max-height: 297mm;
     page-break-after: always;
     break-after: page;
-    padding: 12mm; /* Distance from physical paper edge to border */
+    padding: 10mm 12mm;
     position: relative;
     background: #ffffff;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     overflow: hidden;
   }
 
@@ -48,7 +49,7 @@
     width: 100%;
     height: 100%;
     border: 1.5px solid #1e293b;
-    padding: 7mm 11mm 6mm 11mm;
+    padding: 6mm 10mm 5mm 10mm;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -63,7 +64,7 @@
     align-items: center;
     border-bottom: 1px solid #cbd5e1;
     padding-bottom: 3px;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
     font-size: 9.5pt;
     font-style: italic;
     color: #475569;
@@ -78,7 +79,7 @@
     align-items: center;
     border-top: 1px solid #cbd5e1;
     padding-top: 3px;
-    margin-top: 7px;
+    margin-top: 6px;
     font-size: 9.5pt;
     color: #475569;
     font-family: 'Times New Roman', Times, serif;
@@ -96,101 +97,117 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-height: 0;
     overflow: hidden;
   }
 
-  /* Headings with clear academic hierarchy */
+  /* Document Title: 19pt Bold Times New Roman */
   h1.doc-title {
-    font-size: 18.0pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19.0pt;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #0f172a;
-    line-height: 1.22;
+    line-height: 1.24;
     margin-bottom: 4px;
   }
 
   .doc-subtitle {
-    font-size: 11.5pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12.0pt;
     font-style: italic;
     text-align: center;
-    color: #475569;
-    margin-bottom: 8px;
+    color: #334155;
+    margin-bottom: 7px;
+    line-height: 1.30;
   }
 
   .meta-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border: 1px solid #94a3b8;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   .meta-table td {
-    padding: 4px 8px;
-    font-size: 10.0pt;
+    padding: 3.5px 8px;
+    font-size: 10.5pt;
     border: 1px solid #cbd5e1;
     background: #f8fafc;
+    line-height: 1.30;
   }
 
   .meta-table td strong {
     color: #0f172a;
   }
 
+  /* Main Section Headings: 18pt Bold Times New Roman */
   h2.section-heading {
-    font-size: 14.0pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18.0pt;
     font-weight: bold;
     color: #0f172a;
-    border-bottom: 1.4px solid #0f172a;
-    padding-bottom: 3px;
+    border-bottom: 1.5px solid #0f172a;
+    padding-bottom: 2px;
     margin-top: 1px;
     margin-bottom: 7px;
     letter-spacing: 0.3px;
     text-transform: uppercase;
+    line-height: 1.25;
   }
 
+  /* Subheadings: 15pt Bold Times New Roman */
   h3.sub-heading {
-    font-size: 13.0pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15.0pt;
     font-weight: bold;
     color: #1e293b;
     margin-top: 7px;
     margin-bottom: 4px;
+    line-height: 1.28;
   }
 
+  /* Body Paragraphs: 12pt Justified Times New Roman */
   p {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     text-align: justify;
     text-justify: inter-word;
     font-size: 12.0pt;
-    line-height: 1.44;
+    line-height: 1.40;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   ul, ol {
     margin-left: 22px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   li {
-    margin-bottom: 4px;
+    margin-bottom: 3.5px;
     font-size: 12.0pt;
-    line-height: 1.40;
+    line-height: 1.38;
     text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   /* Academic Data Tables */
   table.data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 5px;
-    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-bottom: 6px;
     font-size: 10.5pt;
-    line-height: 1.36;
+    line-height: 1.34;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   table.data-table th,
   table.data-table td {
-    border: 1px solid #cbd5e1;
-    padding: 5px 8px;
+    border: 1px solid #94a3b8;
+    padding: 3.5px 7px;
     text-align: left;
     vertical-align: top;
   }
@@ -199,7 +216,8 @@
     background-color: #f1f5f9;
     color: #0f172a;
     font-weight: bold;
-    font-size: 11.2pt;
+    font-size: 11.0pt;
+    border-bottom: 1.5px solid #475569;
   }
 
   table.data-table tr:nth-child(even) td {
@@ -221,16 +239,25 @@
     background: #0f172a;
     color: #f8fafc;
     font-family: 'JetBrains Mono', Consolas, monospace;
-    font-size: 8.2pt;
+    font-size: 8.6pt;
     line-height: 1.28;
     padding: 7px 10px;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     border: 1px solid #334155;
     white-space: pre-wrap;
     word-break: break-all;
+  }
+
+  /* Ensure nested code tags inside pre do NOT have white background */
+  pre.code-block code {
+    background: transparent !important;
+    color: inherit !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: inherit !important;
   }
 
   pre.code-block .com { color: #94a3b8; font-style: italic; }
@@ -244,8 +271,8 @@
     background: #090d16;
     color: #38bdf8;
     font-family: 'JetBrains Mono', Consolas, monospace;
-    font-size: 9.0pt;
-    line-height: 1.34;
+    font-size: 8.8pt;
+    line-height: 1.32;
     padding: 6px 10px;
     border-radius: 4px;
     border-left: 3.5px solid #38bdf8;
@@ -268,7 +295,7 @@
     background: #f8fafc;
     border: 1.2px solid #cbd5e1;
     border-radius: 5px;
-    padding: 5px;
+    padding: 6px;
     margin-top: 4px;
     margin-bottom: 6px;
     display: flex;
@@ -281,7 +308,7 @@
     background: #ffffff;
     border: 1.2px solid #cbd5e1;
     border-radius: 5px;
-    padding: 4px;
+    padding: 5px;
     text-align: center;
     margin-top: 4px;
     margin-bottom: 6px;
@@ -289,7 +316,7 @@
 
   .img-card img {
     max-width: 100%;
-    max-height: 175px;
+    max-height: 235px;
     object-fit: contain;
     border-radius: 3px;
     display: block;
@@ -298,8 +325,8 @@
   }
 
   .img-caption {
-    font-size: 9.8pt;
-    color: #1e293b;
+    font-size: 10.2pt;
+    color: #0f172a;
     font-weight: bold;
     margin-top: 4px;
     font-family: 'Times New Roman', Times, serif;
@@ -307,24 +334,26 @@
 
   .callout {
     background: #eff6ff;
-    border-left: 3.5px solid #2563eb;
-    padding: 6px 10px;
+    border-left: 4px solid #2563eb;
+    padding: 5px 10px;
     border-radius: 3px;
     margin-top: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     font-size: 11.2pt;
-    line-height: 1.40;
+    line-height: 1.38;
   }
 
   .math-box {
     background: #f8fafc;
     border: 1.2px solid #cbd5e1;
-    border-left: 3.5px solid #0f172a;
-    padding: 6px 10px;
+    border-left: 4px solid #0f172a;
+    padding: 6px 12px;
     font-size: 11.5pt;
     margin-top: 4px;
     margin-bottom: 6px;
     font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.35;
   }
 
   /* Status Badges */
@@ -347,7 +376,7 @@
 <body>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 1: AIM & PROBLEM STATEMENT (PART 1) -->
+  <!-- PAGE 1: AIM & PROBLEM STATEMENT -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
@@ -362,8 +391,8 @@
 
         <table class="meta-table">
           <tr>
-            <td><strong>Project Domain:</strong> Internet of Things (IoT) / Smart Cities</td>
-            <td><strong>Target Microcontroller:</strong> ESP32 DevKit V1 / ESP8266 NodeMCU</td>
+            <td style="width: 50%;"><strong>Project Domain:</strong> Internet of Things (IoT) / Smart Cities</td>
+            <td style="width: 50%;"><strong>Target Microcontroller:</strong> ESP32 DevKit V1 / ESP8266 NodeMCU</td>
           </tr>
           <tr>
             <td><strong>Primary Sensor:</strong> HC-SR04 Ultrasonic Transducer (40 kHz)</td>
@@ -371,7 +400,7 @@
           </tr>
           <tr>
             <td><strong>Cloud Platform:</strong> Dedicated Municipal Dashboard &amp; ThingSpeak</td>
-            <td><strong>Report Version:</strong> v3.0 (12pt Body &amp; 14pt Heading Edition)</td>
+            <td><strong>Report Version:</strong> Academic Technical Edition (12pt Body &amp; 18pt Headings)</td>
           </tr>
         </table>
 
@@ -403,7 +432,7 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- PAGE 2: PROBLEM STATEMENT (PART 2) & HARDWARE ARCHITECTURE -->
+  <!-- PAGE 2: PROBLEM ANALYSIS & HARDWARE ARCHITECTURE -->
   <!-- ========================================================================= -->
   <div class="page">
     <div class="page-frame">
@@ -425,14 +454,14 @@
         <h2 class="section-heading">2. Components and Tools</h2>
 
         <h3 class="sub-heading">2.1 Hardware Sensor, Controller and Actuator Architecture</h3>
-        <p>The physical node is engineered for low power consumption, resilient acoustic ranging, and long-term operating stability. The hardware bill of materials is detailed below:</p>
+        <p>The physical node is engineered for low power consumption, resilient acoustic ranging, and long-term operating stability. The complete hardware bill of materials is detailed below:</p>
 
         <table class="data-table">
           <thead>
             <tr>
               <th style="width: 20%;">Component</th>
-              <th style="width: 25%;">Model / Specification</th>
-              <th style="width: 55%;">Engineering Purpose &amp; Operational Role</th>
+              <th style="width: 24%;">Model / Specification</th>
+              <th style="width: 56%;">Engineering Purpose &amp; Operational Role</th>
             </tr>
           </thead>
           <tbody>
@@ -535,7 +564,7 @@
         <p>The system architecture separates physical data acquisition, edge signal conditioning, wireless data transmission, and centralized cloud dispatch into distinct, verifiable stages:</p>
 
         <div class="diagram-container">
-          <svg viewBox="0 0 680 145" width="680" height="145" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 680 155" width="100%" height="155" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
@@ -543,57 +572,57 @@
             </defs>
 
             <!-- Sensing Layer -->
-            <rect x="10" y="10" width="130" height="125" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
-            <text x="75" y="28" fill="#1e40af" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">SENSING LAYER</text>
-            <rect x="20" y="38" width="110" height="40" rx="4" fill="#ffffff" stroke="#93c5fd"/>
-            <text x="75" y="54" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04 Ultrasonic</text>
-            <text x="75" y="68" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Acoustic Pulse</text>
-            <rect x="20" y="85" width="110" height="40" rx="4" fill="#ffffff" stroke="#93c5fd"/>
-            <text x="75" y="101" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Level Shifter (1k/2k)</text>
-            <text x="75" y="115" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">5.0V → 3.33V Protection</text>
+            <rect x="10" y="8" width="135" height="138" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+            <text x="77" y="27" fill="#1e40af" font-size="10.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">SENSING LAYER</text>
+            <rect x="18" y="36" width="119" height="46" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2"/>
+            <text x="77" y="54" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04 Ultrasonic</text>
+            <text x="77" y="70" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Acoustic Pulse</text>
+            <rect x="18" y="89" width="119" height="46" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2"/>
+            <text x="77" y="107" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Level Shifter (1k/2k)</text>
+            <text x="77" y="123" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">5.0V → 3.33V Protection</text>
 
-            <line x1="140" y1="72" x2="168" y2="72" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <line x1="145" y1="77" x2="168" y2="77" stroke="#1e293b" stroke-width="2.0" marker-end="url(#arrow)"/>
 
             <!-- Processing Layer -->
-            <rect x="170" y="10" width="155" height="125" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-            <text x="247" y="28" fill="#166534" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">PROCESSING LAYER</text>
-            <rect x="180" y="38" width="135" height="40" rx="4" fill="#ffffff" stroke="#86efac"/>
-            <text x="247" y="54" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
-            <text x="247" y="68" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Tensilica Dual-Core 240MHz</text>
-            <rect x="180" y="85" width="135" height="40" rx="4" fill="#ffffff" stroke="#86efac"/>
-            <text x="247" y="101" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Median Filter &amp; Clamp</text>
-            <text x="247" y="115" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">5-Sample Outlier Rejection</text>
+            <rect x="170" y="8" width="158" height="138" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+            <text x="249" y="27" fill="#166534" font-size="10.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">PROCESSING LAYER</text>
+            <rect x="178" y="36" width="142" height="46" rx="4" fill="#ffffff" stroke="#86efac" stroke-width="1.2"/>
+            <text x="249" y="54" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
+            <text x="249" y="70" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">Tensilica Dual-Core 240MHz</text>
+            <rect x="178" y="89" width="142" height="46" rx="4" fill="#ffffff" stroke="#86efac" stroke-width="1.2"/>
+            <text x="249" y="107" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Median Filter &amp; Clamp</text>
+            <text x="249" y="123" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">5-Sample Outlier Rejection</text>
 
-            <line x1="325" y1="72" x2="353" y2="72" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <line x1="328" y1="77" x2="351" y2="77" stroke="#1e293b" stroke-width="2.0" marker-end="url(#arrow)"/>
 
             <!-- Network Layer -->
-            <rect x="355" y="10" width="145" height="125" rx="6" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
-            <text x="427" y="28" fill="#854d0e" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">NETWORK LAYER</text>
-            <rect x="365" y="38" width="125" height="40" rx="4" fill="#ffffff" stroke="#fde047"/>
-            <text x="427" y="54" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Wi-Fi 802.11 b/g/n</text>
-            <text x="427" y="68" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Station Mode (STA)</text>
-            <rect x="365" y="85" width="125" height="40" rx="4" fill="#ffffff" stroke="#fde047"/>
-            <text x="427" y="101" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST Dispatch</text>
-            <text x="427" y="115" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">JSON Payload Serialization</text>
+            <rect x="353" y="8" width="152" height="138" rx="6" fill="#fefce8" stroke="#ca8a04" stroke-width="1.6"/>
+            <text x="429" y="27" fill="#854d0e" font-size="10.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">NETWORK LAYER</text>
+            <rect x="361" y="36" width="136" height="46" rx="4" fill="#ffffff" stroke="#fde047" stroke-width="1.2"/>
+            <text x="429" y="54" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Wi-Fi 802.11 b/g/n</text>
+            <text x="429" y="70" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">Station Mode (STA)</text>
+            <rect x="361" y="89" width="136" height="46" rx="4" fill="#ffffff" stroke="#fde047" stroke-width="1.2"/>
+            <text x="429" y="107" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST Dispatch</text>
+            <text x="429" y="123" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">JSON Payload Serialization</text>
 
-            <line x1="500" y1="72" x2="528" y2="72" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <line x1="505" y1="77" x2="528" y2="77" stroke="#1e293b" stroke-width="2.0" marker-end="url(#arrow)"/>
 
             <!-- Cloud & App Layer -->
-            <rect x="530" y="10" width="140" height="125" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
-            <text x="600" y="28" fill="#5b21b6" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">CLOUD &amp; APP LAYER</text>
-            <rect x="538" y="38" width="124" height="40" rx="4" fill="#ffffff" stroke="#c4b5fd"/>
-            <text x="600" y="54" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Node.js Express API</text>
-            <text x="600" y="68" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Alerts &amp; Stale Watchdog</text>
-            <rect x="538" y="85" width="124" height="40" rx="4" fill="#ffffff" stroke="#c4b5fd"/>
-            <text x="600" y="101" fill="#0f172a" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">React Dashboard</text>
-            <text x="600" y="115" fill="#475569" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">ThingSpeak IoT Egress</text>
+            <rect x="530" y="8" width="140" height="138" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+            <text x="600" y="27" fill="#5b21b6" font-size="10.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">CLOUD &amp; APP LAYER</text>
+            <rect x="538" y="36" width="124" height="46" rx="4" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2"/>
+            <text x="600" y="54" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Node.js Express API</text>
+            <text x="600" y="70" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">Alerts &amp; Stale Watchdog</text>
+            <rect x="538" y="89" width="124" height="46" rx="4" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2"/>
+            <text x="600" y="107" fill="#0f172a" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">React Dashboard</text>
+            <text x="600" y="123" fill="#475569" font-size="8.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">ThingSpeak IoT Egress</text>
           </svg>
         </div>
       </div>
 
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 2.2 &amp; 3.1: Block Diagram</span>
+        <span>Section 2.2 &amp; 3.1: Architecture &amp; Block Diagram</span>
         <span class="page-num">Page 3 of 14</span>
       </div>
     </div>
@@ -614,77 +643,77 @@
         <p>The firmware execution pipeline enforces strict acoustic noise suppression, fail-safe range validation, and non-blocking network transmission:</p>
 
         <div class="diagram-container">
-          <svg viewBox="0 0 680 155" width="680" height="155" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 680 185" width="100%" height="185" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <marker id="arrow2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <marker id="arrow2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
               </marker>
             </defs>
 
             <!-- Boot / Setup -->
-            <rect x="10" y="65" width="85" height="36" rx="18" fill="#1e293b" stroke="#0f172a"/>
-            <text x="52" y="81" fill="#ffffff" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">START</text>
-            <text x="52" y="92" fill="#94a3b8" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Boot &amp; GPIO Init</text>
+            <rect x="8" y="70" width="88" height="44" rx="22" fill="#1e293b" stroke="#0f172a"/>
+            <text x="52" y="89" fill="#ffffff" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">START</text>
+            <text x="52" y="103" fill="#94a3b8" font-size="7.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Boot &amp; GPIO Init</text>
 
-            <line x1="95" y1="83" x2="118" y2="83" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arrow2)"/>
+            <line x1="96" y1="92" x2="116" y2="92" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow2)"/>
 
             <!-- Wi-Fi Connect -->
-            <rect x="120" y="65" width="85" height="36" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
-            <text x="162" y="80" fill="#1e40af" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Connect Wi-Fi</text>
-            <text x="162" y="91" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Station STA Mode</text>
+            <rect x="118" y="70" width="88" height="44" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+            <text x="162" y="88" fill="#1e40af" font-size="8.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Connect Wi-Fi</text>
+            <text x="162" y="102" fill="#475569" font-size="7.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Station STA Mode</text>
 
-            <line x1="205" y1="83" x2="228" y2="83" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arrow2)"/>
+            <line x1="206" y1="92" x2="226" y2="92" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow2)"/>
 
             <!-- Ping Burst -->
-            <rect x="230" y="62" width="85" height="42" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-            <text x="272" y="77" fill="#166534" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Fire 5 Pings</text>
-            <text x="272" y="88" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">10µs Trig Bursts</text>
-            <text x="272" y="98" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Capture Echo T</text>
+            <rect x="228" y="66" width="92" height="52" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+            <text x="274" y="83" fill="#166534" font-size="8.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Fire 5 Pings</text>
+            <text x="274" y="96" fill="#475569" font-size="7.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">10µs Trig Bursts</text>
+            <text x="274" y="108" fill="#475569" font-size="7.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Capture Echo T</text>
 
-            <line x1="315" y1="83" x2="338" y2="83" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arrow2)"/>
+            <line x1="320" y1="92" x2="340" y2="92" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow2)"/>
 
             <!-- Median Filter -->
-            <rect x="340" y="62" width="85" height="42" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-            <text x="382" y="77" fill="#166534" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Sort Samples</text>
-            <text x="382" y="88" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Extract Median</text>
-            <text x="382" y="98" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">D_med (cm)</text>
+            <rect x="342" y="66" width="92" height="52" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+            <text x="388" y="83" fill="#166534" font-size="8.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Sort Samples</text>
+            <text x="388" y="96" fill="#475569" font-size="7.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Extract Median</text>
+            <text x="388" y="108" fill="#475569" font-size="7.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">D_med (cm)</text>
 
-            <line x1="425" y1="83" x2="446" y2="83" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arrow2)"/>
+            <line x1="434" y1="92" x2="452" y2="92" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow2)"/>
 
             <!-- Decision Diamond -->
-            <polygon points="480,59 515,83 480,107 445,83" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-            <text x="480" y="80" fill="#92400e" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Distance</text>
-            <text x="480" y="90" fill="#92400e" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">&gt; 0 &amp; &le; 50?</text>
+            <polygon points="488,64 526,92 488,120 450,92" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/>
+            <text x="488" y="88" fill="#92400e" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Distance</text>
+            <text x="488" y="100" fill="#92400e" font-size="7.6" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">&gt;0 &amp; &le;50?</text>
 
             <!-- No: SENSOR ERROR -->
-            <line x1="480" y1="59" x2="480" y2="28" stroke="#dc2626" stroke-width="1.5"/>
-            <line x1="480" y1="28" x2="540" y2="28" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow2)"/>
-            <text x="492" y="44" fill="#dc2626" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif">NO</text>
-            <rect x="543" y="14" width="80" height="28" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
-            <text x="583" y="27" fill="#991b1b" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Flag Sensor Error</text>
-            <text x="583" y="37" fill="#991b1b" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Fill % = null</text>
+            <line x1="488" y1="64" x2="488" y2="30" stroke="#dc2626" stroke-width="1.8"/>
+            <line x1="488" y1="30" x2="540" y2="30" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrow2)"/>
+            <text x="500" y="48" fill="#dc2626" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif">NO</text>
+            <rect x="542" y="14" width="90" height="34" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.6"/>
+            <text x="587" y="28" fill="#991b1b" font-size="8.4" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Flag Sensor Error</text>
+            <text x="587" y="40" fill="#991b1b" font-size="7.6" font-family="'Times New Roman', Times, serif" text-anchor="middle">Fill % = null</text>
 
             <!-- Yes: Compute Fill % -->
-            <line x1="515" y1="83" x2="540" y2="83" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow2)"/>
-            <text x="525" y="76" fill="#16a34a" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif">YES</text>
-            <rect x="543" y="62" width="80" height="42" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
-            <text x="583" y="77" fill="#166534" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Compute Fill %</text>
-            <text x="583" y="88" fill="#166534" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Tier Classification</text>
-            <text x="583" y="98" fill="#166534" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">LOW/MED/HIGH/FULL</text>
+            <line x1="526" y1="92" x2="542" y2="92" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arrow2)"/>
+            <text x="531" y="85" fill="#16a34a" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif">YES</text>
+            <rect x="544" y="66" width="92" height="52" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+            <text x="590" y="83" fill="#166534" font-size="8.4" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Compute Fill %</text>
+            <text x="590" y="96" fill="#166534" font-size="7.6" font-family="'Times New Roman', Times, serif" text-anchor="middle">Tier Classification</text>
+            <text x="590" y="108" fill="#166534" font-size="7.6" font-family="'Times New Roman', Times, serif" text-anchor="middle">LOW/MED/HIGH/FULL</text>
 
             <!-- Merge to JSON POST -->
-            <line x1="623" y1="28" x2="648" y2="28" stroke="#475569" stroke-width="1.5"/>
-            <line x1="648" y1="28" x2="648" y2="114" stroke="#475569" stroke-width="1.5"/>
-            <line x1="623" y1="83" x2="648" y2="83" stroke="#475569" stroke-width="1.5"/>
+            <line x1="632" y1="30" x2="654" y2="30" stroke="#475569" stroke-width="1.8"/>
+            <line x1="654" y1="30" x2="654" y2="148" stroke="#475569" stroke-width="1.8"/>
+            <line x1="636" y1="92" x2="654" y2="92" stroke="#475569" stroke-width="1.8"/>
 
-            <rect x="588" y="114" width="85" height="34" rx="4" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
-            <text x="630" y="128" fill="#6b21a8" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST</text>
-            <text x="630" y="139" fill="#475569" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">JSON to /api/bins/data</text>
+            <rect x="575" y="132" width="95" height="38" rx="4" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.6"/>
+            <text x="622" y="148" fill="#6b21a8" font-size="8.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HTTP POST</text>
+            <text x="622" y="161" fill="#475569" font-size="7.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">JSON to /api/bins/data</text>
 
             <!-- Delay Loop -->
-            <line x1="588" y1="131" x2="272" y2="131" stroke="#475569" stroke-width="1.5"/>
-            <line x1="272" y1="131" x2="272" y2="108" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow2)"/>
-            <text x="430" y="126" fill="#475569" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Delay 5000 ms (Heartbeat Telemetry Loop)</text>
+            <line x1="575" y1="151" x2="274" y2="151" stroke="#475569" stroke-width="1.8"/>
+            <line x1="274" y1="151" x2="274" y2="122" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow2)"/>
+            <text x="424" y="145" fill="#334155" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">Delay 5000 ms (Heartbeat Telemetry Loop)</text>
           </svg>
         </div>
 
@@ -724,70 +753,70 @@
 
         <h3 class="sub-heading">4.1 Wokwi Simulation Circuit Schematic</h3>
         <div class="diagram-container">
-          <svg viewBox="0 0 680 145" width="680" height="145" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="6" width="650" height="133" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+          <svg viewBox="0 0 680 150" width="100%" height="150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="5" width="660" height="140" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
 
             <!-- HC-SR04 Block -->
-            <rect x="35" y="16" width="130" height="106" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
-            <circle cx="65" cy="52" r="19" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
-            <circle cx="135" cy="52" r="19" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
-            <text x="65" y="55" fill="#94a3b8" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRANSMIT</text>
-            <text x="135" y="55" fill="#94a3b8" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RECEIVE</text>
-            <text x="100" y="89" fill="#ffffff" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
-            <text x="100" y="100" fill="#38bdf8" font-size="6.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">40kHz Ultrasonic</text>
+            <rect x="25" y="14" width="145" height="116" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <circle cx="60" cy="50" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.8"/>
+            <circle cx="135" cy="50" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.8"/>
+            <text x="60" y="53" fill="#94a3b8" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRANSMIT</text>
+            <text x="135" y="53" fill="#94a3b8" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RECEIVE</text>
+            <text x="97" y="86" fill="#ffffff" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
+            <text x="97" y="98" fill="#38bdf8" font-size="7.2" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
 
             <!-- Pins on HC-SR04 -->
-            <circle cx="45" cy="118" r="3.5" fill="#ef4444"/>
-            <text x="45" y="113" fill="#f87171" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
-            <circle cx="75" cy="118" r="3.5" fill="#3b82f6"/>
-            <text x="75" y="113" fill="#93c5fd" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
-            <circle cx="115" cy="118" r="3.5" fill="#10b981"/>
-            <text x="115" y="113" fill="#6ee7b7" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
-            <circle cx="155" cy="118" r="3.5" fill="#000000"/>
-            <text x="155" y="113" fill="#94a3b8" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <circle cx="42" cy="120" r="3.5" fill="#ef4444"/>
+            <text x="42" y="114" fill="#f87171" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
+            <circle cx="78" cy="120" r="3.5" fill="#3b82f6"/>
+            <text x="78" y="114" fill="#93c5fd" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
+            <circle cx="118" cy="120" r="3.5" fill="#10b981"/>
+            <text x="118" y="114" fill="#6ee7b7" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
+            <circle cx="152" cy="120" r="3.5" fill="#000000"/>
+            <text x="152" y="114" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
             <!-- ESP32 DevKit Block -->
-            <rect x="470" y="14" width="180" height="118" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
-            <rect x="520" y="19" width="80" height="18" rx="3" fill="#334155"/>
-            <text x="560" y="32" fill="#e2e8f0" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
-            <text x="560" y="50" fill="#60a5fa" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
-            <text x="560" y="61" fill="#94a3b8" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
+            <rect x="475" y="14" width="180" height="122" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
+            <rect x="525" y="19" width="80" height="16" rx="3" fill="#334155"/>
+            <text x="565" y="31" fill="#e2e8f0" font-size="8.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
+            <text x="565" y="50" fill="#60a5fa" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
+            <text x="565" y="62" fill="#94a3b8" font-size="7.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
 
             <!-- MCU Pin Callouts -->
-            <rect x="475" y="74" width="45" height="12" fill="#1e293b" rx="2"/>
-            <text x="497" y="83" fill="#f87171" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
+            <rect x="480" y="74" width="46" height="13" fill="#1e293b" rx="2"/>
+            <text x="503" y="84" fill="#f87171" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
 
-            <rect x="475" y="90" width="45" height="12" fill="#1e293b" rx="2"/>
-            <text x="497" y="99" fill="#94a3b8" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <rect x="480" y="92" width="46" height="13" fill="#1e293b" rx="2"/>
+            <text x="503" y="102" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
-            <rect x="475" y="106" width="45" height="12" fill="#1e293b" rx="2"/>
-            <text x="497" y="115" fill="#93c5fd" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
+            <rect x="480" y="110" width="46" height="13" fill="#1e293b" rx="2"/>
+            <text x="503" y="120" fill="#93c5fd" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
 
-            <rect x="535" y="106" width="45" height="12" fill="#1e293b" rx="2"/>
-            <text x="557" y="115" fill="#6ee7b7" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
+            <rect x="538" y="110" width="46" height="13" fill="#1e293b" rx="2"/>
+            <text x="561" y="120" fill="#6ee7b7" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
 
             <!-- Voltage Divider Box -->
-            <rect x="255" y="34" width="150" height="74" rx="6" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <text x="330" y="48" fill="#7e22ce" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
+            <rect x="235" y="32" width="180" height="78" rx="6" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <text x="325" y="48" fill="#7e22ce" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
 
             <!-- Resistor R1 -->
-            <rect x="275" y="58" width="35" height="11" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="292" y="66" fill="#0f172a" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
+            <rect x="255" y="58" width="40" height="14" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="275" y="68" fill="#0f172a" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
 
             <!-- Resistor R2 -->
-            <rect x="345" y="80" width="35" height="11" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="362" y="88" fill="#0f172a" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
+            <rect x="345" y="80" width="40" height="14" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="365" y="90" fill="#0f172a" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
 
             <!-- Wiring Paths -->
-            <path d="M 45 118 L 45 130 L 430 130 L 430 80 L 475 80" fill="none" stroke="#ef4444" stroke-width="1.8"/>
-            <path d="M 155 118 L 155 125 L 440 125 L 440 96 L 475 96" fill="none" stroke="#0f172a" stroke-width="1.8"/>
-            <path d="M 75 118 L 75 112 L 230 112 L 230 112 L 475 112" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
-            <path d="M 115 118 L 115 63 L 275 63" fill="none" stroke="#10b981" stroke-width="1.8"/>
-            <text x="180" y="58" fill="#059669" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
-            <path d="M 310 63 L 335 63 L 335 112 L 535 112" fill="none" stroke="#9333ea" stroke-width="1.8"/>
-            <text x="415" y="108" fill="#7e22ce" font-size="6.2" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
-            <path d="M 335 63 L 335 85 L 345 85" fill="none" stroke="#9333ea" stroke-width="1.5"/>
-            <path d="M 380 85 L 400 85 L 400 96 L 440 96" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+            <path d="M 42 120 L 42 136 L 440 136 L 440 81 L 480 81" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+            <path d="M 152 120 L 152 128 L 450 128 L 450 99 L 480 99" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+            <path d="M 78 120 L 78 116 L 220 116 L 220 116 L 480 116" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+            <path d="M 118 120 L 118 65 L 255 65" fill="none" stroke="#10b981" stroke-width="1.8"/>
+            <text x="186" y="60" fill="#059669" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
+            <path d="M 295 65 L 325 65 L 325 116 L 538 116" fill="none" stroke="#9333ea" stroke-width="1.8"/>
+            <text x="382" y="112" fill="#7e22ce" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
+            <path d="M 325 65 L 325 87 L 345 87" fill="none" stroke="#9333ea" stroke-width="1.5"/>
+            <path d="M 385 87 L 410 87 L 410 99 L 450 99" fill="none" stroke="#0f172a" stroke-width="1.5"/>
           </svg>
         </div>
 
@@ -856,7 +885,7 @@
         </table>
 
         <h3 class="sub-heading">4.3 Overvoltage Protection Engineering Rationale</h3>
-        <p>The ESP32 microcontroller operates on 3.3V CMOS logic rails. While the HC-SR04 trigger pin responds reliably to 3.3V trigger signals, its ECHO pin drives a full 5.0V TTL pulse. Direct connection of the 5.0V ECHO output to a 3.3V GPIO input exceeds the absolute maximum rating of the MCU (V_DD + 0.3V = 3.6V), risking progressive gate dielectric breakdown and permanent pin latch-up. By implementing a passive voltage divider with R1 = 1 kΩ and R2 = 2 kΩ, the peak voltage is clamped to:</p>
+        <p>The ESP32 microcontroller operates on 3.3V CMOS logic rails. While the HC-SR04 trigger pin responds reliably to 3.3V trigger signals, its ECHO pin drives a full 5.0V TTL pulse. Direct connection of the 5.0V ECHO output to a 3.3V GPIO input exceeds the absolute maximum rating of the MCU (V_DD + 0.3V = 3.6V), risking progressive gate dielectric breakdown and permanent pin latch-up. By implementing a passive voltage divider with R1 = 1 kΩ and R2 = 2 kΩ, the peak voltage is clamped to a safe level:</p>
         <div class="math-box">
           V_GPIO27 = V_ECHO &times; (R2 / (R1 + R2)) = 5.0 V &times; (2000 / (1000 + 2000)) = 3.33 V  (100% safe for 3.3V inputs)
         </div>
@@ -876,7 +905,7 @@
   <div class="page">
     <div class="page-frame">
       <div class="frame-header">
-        <span>SmartBin IoT — Embedded Firmware (Part 1)</span>
+        <span>SmartBin IoT — Embedded Firmware Architecture</span>
         <span>Technical Project Report</span>
       </div>
 
@@ -888,7 +917,7 @@
         <pre class="code-block"><code><span class="com">/**
  * SmartBin — Municipal Solid Waste Monitoring Firmware
  * Target: ESP32 DevKit V1 (Wokwi) / ESP8266 NodeMCU v2
- * Pinout: TRIG -&gt; GPIO14, ECHO -&gt; GPIO27 (via 1k/2k Divider), LED -&gt; GPIO2
+ * Pinout: TRIG -> GPIO14, ECHO -> GPIO27 (via 1k/2k Divider), LED -> GPIO2
  */</span>
 <span class="kw">#include</span> <span class="str">&lt;WiFi.h&gt;</span>
 <span class="kw">#include</span> <span class="str">&lt;HTTPClient.h&gt;</span>
@@ -966,7 +995,7 @@
   <div class="page">
     <div class="page-frame">
       <div class="frame-header">
-        <span>SmartBin IoT — Embedded Firmware (Part 2)</span>
+        <span>SmartBin IoT — Firmware Telemetry &amp; Dispatch Logic</span>
         <span>Technical Project Report</span>
       </div>
 
@@ -985,8 +1014,7 @@
              (fillPercentage &gt;= <span class="num">50.0f</span>) ? <span class="str">"MEDIUM"</span> : <span class="str">"LOW"</span>;
   }
 
-  <span class="fn">Serial.printf</span>(<span class="str">"[Reading %lu] distance=%.1f cm, fill=%.1f%%, status=%s
-"</span>,
+  <span class="fn">Serial.printf</span>(<span class="str">"[Reading %lu] distance=%.1f cm, fill=%.1f%%, status=%s\n"</span>,
                 (<span class="kw">unsigned long</span>)(++transmissionCounter), distance, fillPercentage, status);
 
   <span class="kw">if</span> (<span class="fn">WiFi.status</span>() != <span class="num">WL_CONNECTED</span>) {
@@ -999,16 +1027,15 @@
   <span class="type">HTTPClient</span> http;
   <span class="kw">if</span> (http.<span class="fn">begin</span>(client, BACKEND_API_URL)) {
     http.<span class="fn">addHeader</span>(<span class="str">"Content-Type"</span>, <span class="str">"application/json"</span>);
-    <span class="type">String</span> payload = <span class="str">"{"bin_id":""</span> + <span class="type">String</span>(DEVICE_BIN_ID) + <span class="str">"","</span>;
-    payload += <span class="str">""distance_cm":"</span> + <span class="type">String</span>(distance, <span class="num">1</span>) + <span class="str">","</span>;
-    payload += <span class="str">""fill_percentage":"</span> + (sensorValid ? <span class="type">String</span>(fillPercentage, <span class="num">1</span>) : <span class="str">"null"</span>) + <span class="str">","</span>;
-    payload += <span class="str">""status":""</span> + <span class="type">String</span>(status) + <span class="str">"","</span>;
-    payload += <span class="str">""sensor_valid":"</span> + <span class="type">String</span>(sensorValid ? <span class="str">"true"</span> : <span class="str">"false"</span>) + <span class="str">","</span>;
-    payload += <span class="str">""source":"hardware"}"</span>;
+    <span class="type">String</span> payload = <span class="str">"{\"bin_id\":\""</span> + <span class="type">String</span>(DEVICE_BIN_ID) + <span class="str">"\","</span>;
+    payload += <span class="str">"\"distance_cm\":"</span> + <span class="type">String</span>(distance, <span class="num">1</span>) + <span class="str">","</span>;
+    payload += <span class="str">"\"fill_percentage\":"</span> + (sensorValid ? <span class="type">String</span>(fillPercentage, <span class="num">1</span>) : <span class="str">"null"</span>) + <span class="str">","</span>;
+    payload += <span class="str">"\"status\":\""</span> + <span class="type">String</span>(status) + <span class="str">"\","</span>;
+    payload += <span class="str">"\"sensor_valid\":"</span> + <span class="type">String</span>(sensorValid ? <span class="str">"true"</span> : <span class="str">"false"</span>) + <span class="str">","</span>;
+    payload += <span class="str">"\"source\":\"hardware\"}"</span>;
 
     <span class="type">int</span> responseCode = http.<span class="fn">POST</span>(payload);
-    <span class="fn">Serial.printf</span>(<span class="str">"[HTTP] POST Result Code: %d
-"</span>, responseCode);
+    <span class="fn">Serial.printf</span>(<span class="str">"[HTTP] POST Result Code: %d\n"</span>, responseCode);
     http.<span class="fn">end</span>();
   }
   <span class="fn">digitalWrite</span>(PIN_LED, <span class="num">HIGH</span>); <span class="com">// Turn OFF diagnostic LED</span>
@@ -1024,9 +1051,7 @@
   <span class="fn">WiFi.mode</span>(<span class="num">WIFI_STA</span>);
   <span class="fn">WiFi.begin</span>(WIFI_SSID, WIFI_PASSWORD);
   <span class="kw">while</span> (<span class="fn">WiFi.status</span>() != <span class="num">WL_CONNECTED</span>) { <span class="fn">delay</span>(<span class="num">400</span>); <span class="fn">Serial.print</span>(<span class="str">"."</span>); }
-  <span class="fn">Serial.printf</span>(<span class="str">"
-[WiFi] Connected: %s
-"</span>, <span class="fn">WiFi.localIP</span>().<span class="fn">toString</span>().<span class="fn">c_str</span>());
+  <span class="fn">Serial.printf</span>(<span class="str">"\n[WiFi] Connected: %s\n"</span>, <span class="fn">WiFi.localIP</span>().<span class="fn">toString</span>().<span class="fn">c_str</span>());
 }
 
 <span class="type">void</span> <span class="fn">loop</span>() {
@@ -1052,23 +1077,64 @@
   <div class="page">
     <div class="page-frame">
       <div class="frame-header">
-        <span>SmartBin IoT — Noise Filtering &amp; Timing Architecture</span>
+        <span>SmartBin IoT — Noise Suppression &amp; Timing Architecture</span>
         <span>Technical Project Report</span>
       </div>
 
       <div class="page-body">
         <h3 class="sub-heading">5.3 Median Filtering Rationale and Noise Suppression</h3>
-        <p>In municipal waste receptacles, acoustic reflections can easily bounce off uneven bags, cardboard lids, or metallic sides, producing brief transient spikes or echo dropouts. Conventional single-ping readings or simple moving averages suffer from skew when a single outlier (e.g. D = 0 cm or D = 400 cm) occurs.</p>
-        <p>The implemented <strong>5-sample median filter</strong> sorts all five pings and extracts the exact middle value (N/2). This mathematically guarantees that up to two complete outlier pings per burst are fully rejected without corrupting the reported fill metric, providing rock-solid reliability in dynamic field deployments.</p>
+        <p>In municipal waste receptacles, acoustic reflections can easily bounce off uneven bags, crumpled cardboard lids, metallic container sidewalls, or descending debris, producing brief transient spikes or echo dropouts. Conventional single-ping readings or simple moving averages suffer from severe skew whenever a single outlier (e.g., D = 0 cm from echo loss or D = 400 cm from corner deflection) occurs.</p>
+        <p>The implemented <strong>5-sample median filter</strong> fires five consecutive acoustic pings spaced by 20 ms damping intervals, sorts the returned duration samples in ascending order, and extracts the exact middle value (N/2). This mathematically guarantees that up to two complete outlier pings per burst are fully rejected without corrupting the reported fill metric, providing rock-solid reliability in dynamic field deployments.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Acoustic Scenario</th>
+              <th style="width: 25%;">Raw 5-Ping Burst (cm)</th>
+              <th style="width: 25%;">Simple Mean Output</th>
+              <th style="width: 25%;">Median Filter Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Baseline Uniform Fill</strong></td>
+              <td>22.1, 22.4, 22.0, 22.3, 22.2</td>
+              <td>22.2 cm (Accurate)</td>
+              <td><strong>22.2 cm (Optimal)</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Single Echo Dropout</strong></td>
+              <td>22.3, 22.1, <strong>0.0 (Timeout)</strong>, 22.4, 22.2</td>
+              <td>17.8 cm (-20% False Error)</td>
+              <td><strong>22.2 cm (100% Correct)</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Cardboard Flap Reflection</strong></td>
+              <td>21.9, <strong>4.8 (Flap)</strong>, 22.1, 22.0, 22.3</td>
+              <td>18.6 cm (Distorted)</td>
+              <td><strong>22.0 cm (100% Correct)</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Double Acoustic Spike</strong></td>
+              <td><strong>0.0</strong>, 22.5, <strong>395.0 (Multipath)</strong>, 22.4, 22.6</td>
+              <td>92.5 cm (Catastrophic Error)</td>
+              <td><strong>22.5 cm (100% Correct)</strong></td>
+            </tr>
+          </tbody>
+        </table>
 
         <h3 class="sub-heading">5.4 Non-Blocking Timing Architecture &amp; Connection Resilience</h3>
         <p>The main execution loop uses non-blocking delta time evaluation via <code>millis()</code> rather than traditional blocking delays. This ensures the microcontroller remains immediately responsive to Wi-Fi state changes, recovers promptly if a gateway drops offline, and maintains consistent 5000 ms telemetry periodicity without processor stalling.</p>
         <p>When network connectivity drops, the firmware queues internal state without freezing, and automatically reinitiates background handshakes using <code>WiFi.reconnect()</code>. Once reconnected, real-time data streaming resumes seamlessly.</p>
+
+        <h3 class="sub-heading">5.5 Edge vs. Cloud Tier Classification Redundancy</h3>
+        <p>The system employs a dual-tier classification safeguard. Edge firmware computes preliminary operational statuses to allow immediate diagnostic LED toggling and local serial debugging. Upon receiving the JSON packet, the centralized Node.js backend independently re-evaluates distance against dynamic municipal configuration parameters.</p>
+        <p>This architectural redundancy ensures that if a municipal administrator modifies the collection threshold (e.g., lowering the HIGH threshold from 80% to 75% during monsoon season), the entire city fleet reacts instantaneously without requiring over-the-air firmware reflashing of every distributed sensor node.</p>
       </div>
 
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 5.3 &amp; 5.4: Noise Filter &amp; Timing Architecture</span>
+        <span>Section 5.3 - 5.5: Noise Filter &amp; Timing Architecture</span>
         <span class="page-num">Page 8 of 14</span>
       </div>
     </div>
@@ -1085,7 +1151,7 @@
       </div>
 
       <div class="page-body">
-        <h3 class="sub-heading">5.5 Threshold Classification and Operational Priority Matrix</h3>
+        <h3 class="sub-heading">5.6 Threshold Classification and Operational Priority Matrix</h3>
         <p>The firmware maps continuous ultrasonic distance measurements into five distinct operational tiers. Each tier corresponds to a specific municipal dispatch priority and automated protocol, ensuring prompt response while avoiding needless vehicle dispatches:</p>
 
         <table class="data-table">
@@ -1137,14 +1203,14 @@
           </tbody>
         </table>
 
-        <h3 class="sub-heading">5.6 Edge vs. Cloud Tier Classification Redundancy</h3>
-        <p>The system employs a dual-tier classification safeguard. Edge firmware computes the preliminary operational status to allow immediate diagnostic LED toggling and local serial debugging. Upon receiving the JSON packet, the centralized Node.js backend independently re-evaluates distance against dynamic municipal configuration parameters.</p>
-        <p>This architectural redundancy ensures that if a municipal administrator modifies the collection threshold (e.g., lowering the HIGH threshold from 80% to 75% during monsoon season), the entire city fleet reacts instantaneously without requiring over-the-air firmware reflashing of every distributed sensor node.</p>
+        <h3 class="sub-heading">5.7 Dynamic Configuration &amp; Remote Over-the-Air Reclassification</h3>
+        <p>In municipal deployments, waste generation dynamics vary substantially across urban zones and seasons. High-density commercial areas near markets generate high-volume biodegradable refuse requiring lower safety thresholds (e.g., 75% trigger), whereas dry recyclable collection points operate efficiently at 90% thresholds.</p>
+        <p>By decoupling raw sensor measurement from cloud dispatch logic, the SmartBin backend dynamically applies zonally tailored calibration matrices without modifying on-device firmware. When network administrators push new parameters through the React dashboard, all subsequent telemetry ingestions immediately conform to the updated threshold limits, providing centralized agility and zero device downtime.</p>
       </div>
 
       <div class="frame-footer">
         <span>SmartBin: IoT Waste Monitoring System</span>
-        <span>Section 5.5 &amp; 5.6: Threshold Matrix</span>
+        <span>Section 5.6 &amp; 5.7: Threshold Matrix</span>
         <span class="page-num">Page 9 of 14</span>
       </div>
     </div>
@@ -1211,7 +1277,7 @@
   <div class="page">
     <div class="page-frame">
       <div class="frame-header">
-        <span>SmartBin IoT — Live Monitoring &amp; Simulation Engine</span>
+        <span>SmartBin IoT — Live Telemetry &amp; Simulation Lab</span>
         <span>Technical Project Report</span>
       </div>
 
@@ -1219,14 +1285,14 @@
         <h3 class="sub-heading">6.4 Live Sensor Monitoring &amp; Calibration Interface</h3>
         <p>The live monitoring console displays individual bin status cards, numerical distance measurements, calibrated fill bars with dynamic color transitions, battery voltages, and recommended actions:</p>
         <div class="img-card">
-          <img src="report_assets/dashboard_monitoring.png" alt="SmartBin Live Monitoring Interface">
+          <img src="report_assets/dashboard_monitoring.png" alt="SmartBin Live Monitoring Interface" style="max-height: 220px;">
           <div class="img-caption">Figure 6.2: Live Bin Monitoring — Visual Fill Levels, Battery Status &amp; Action Recommendations</div>
         </div>
 
         <h3 class="sub-heading">6.5 Autonomous Simulation Lab &amp; Virtual Sensor Control</h3>
         <p>The integrated simulation lab allows operators to stress-test the collection routing algorithm by simulating city-wide waste surges, network disconnections, and sensor blind-zone faults across virtual bins:</p>
         <div class="img-card">
-          <img src="report_assets/dashboard_simulation.png" alt="SmartBin Simulation Control Lab">
+          <img src="report_assets/dashboard_simulation.png" alt="SmartBin Simulation Control Lab" style="max-height: 220px;">
           <div class="img-caption">Figure 6.3: Autonomous Simulation Lab — Dynamic City-wide Fill Pattern Generator &amp; Stress Testing</div>
         </div>
       </div>
@@ -1245,7 +1311,7 @@
   <div class="page">
     <div class="page-frame">
       <div class="frame-header">
-        <span>SmartBin IoT — Alerts Center &amp; ThingSpeak Integration</span>
+        <span>SmartBin IoT — Alerts Center &amp; ThingSpeak Cloud</span>
         <span>Technical Project Report</span>
       </div>
 
@@ -1253,7 +1319,7 @@
         <h3 class="sub-heading">6.6 Multi-Channel Alert Management Center</h3>
         <p>When any container exceeds 80% capacity, the alert engine logs a deduplicated incident record, triggers audio-visual alarms at dispatch headquarters, and queues the receptacle onto dynamic collection routes:</p>
         <div class="img-card">
-          <img src="report_assets/dashboard_alerts.png" alt="SmartBin Real-time Alert Management">
+          <img src="report_assets/dashboard_alerts.png" alt="SmartBin Real-time Alert Management" style="max-height: 235px;">
           <div class="img-caption">Figure 6.4: Alert Management Center — Critical Overflow Triggers &amp; Historical Audit Trail</div>
         </div>
 
@@ -1426,7 +1492,7 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
           <li><strong>Solar Energy Harvesting &amp; Deep Sleep:</strong> Equip bins with a compact 5V solar panel, 18650 Li-ion battery, and deep-sleep cycling (waking for 200 ms every 5 minutes) for self-sustaining off-grid operation.</li>
         </ul>
 
-        <div style="margin-top: 8px; border-top: 1px dashed #cbd5e1; padding-top: 6px; display: flex; justify-content: space-between; font-size: 9.5pt; color: #475569;">
+        <div style="margin-top: 10px; border-top: 1px dashed #cbd5e1; padding-top: 6px; display: flex; justify-content: space-between; font-size: 9.5pt; color: #475569;">
           <div>
             <strong>Student / Author Signature:</strong> _______________________<br>
             <span>Date: ________________________</span>
