@@ -975,31 +975,26 @@ def build_report_html():
         <p>The embedded firmware is written in C++ for the ESP32 / ESP8266 Arduino Core. The software architecture is split into modular tasks: acoustic burst generation, multi-sample median sorting, fill-level math clamping, 5-tier status classification, and formatted JSON HTTP telemetry dispatch.</p>
 
         <h3 class="sub-heading">5.1 Firmware Source Code: Calibration Constants &amp; 5-Sample Median Filter</h3>
-        <pre class="code-block"><code><span class="com">/**
+        <pre class="code-block" style="font-size: 8.2pt; line-height: 1.18; padding: 5px 8px;"><code><span class="com">/**
  * SmartBin — Municipal Solid Waste Monitoring Firmware (ESP32 DevKit V1)
  * Pinout: TRIG -&gt; GPIO14, ECHO -&gt; GPIO27 (via 1k/2k Divider), LED -&gt; GPIO2
  */</span>
 <span class="kw">#include</span> <span class="str">&lt;WiFi.h&gt;</span>
 <span class="kw">#include</span> <span class="str">&lt;HTTPClient.h&gt;</span>
 
-<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">PIN_TRIG</span> = <span class="num">14</span>;                  <span class="com">// Ultrasonic trigger pulse output</span>
-<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">PIN_ECHO</span> = <span class="num">27</span>;                  <span class="com">// Level-shifted echo pulse input</span>
-<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">PIN_LED</span>  = <span class="num">2</span>;                   <span class="com">// Built-in activity LED indicator</span>
-
-<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">EMPTY_DISTANCE_CM</span>      = <span class="num">40.0f</span>; <span class="com">// Distance from sensor to bin floor</span>
-<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">FULL_DISTANCE_CM</span>       = <span class="num">5.0f</span>;  <span class="com">// Distance when trash reaches max fill</span>
-<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">SOUND_SPEED_CM_PER_US</span>  = <span class="num">0.0343f</span>;<span class="com">// Acoustic velocity at 20°C in air</span>
-<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">PULSE_TIMEOUT_US</span>       = <span class="num">30000</span>; <span class="com">// 30ms echo timeout (~510 cm max)</span>
-<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">TELEMETRY_INTERVAL_MS</span>  = <span class="num">5000</span>;  <span class="com">// Telemetry period (5 seconds)</span>
-<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">FILTER_SAMPLE_COUNT</span>    = <span class="num">5</span>;     <span class="com">// Burst samples for median sorting</span>
+<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">PIN_TRIG</span> = <span class="num">14</span>, <span class="fn">PIN_ECHO</span> = <span class="num">27</span>, <span class="fn">PIN_LED</span> = <span class="num">2</span>;
+<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">EMPTY_DISTANCE_CM</span> = <span class="num">40.0f</span>, <span class="fn">FULL_DISTANCE_CM</span> = <span class="num">5.0f</span>;
+<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">SOUND_SPEED_CM_PER_US</span> = <span class="num">0.0343f</span>; <span class="com">// Acoustic velocity at 20°C in air</span>
+<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">PULSE_TIMEOUT_US</span> = <span class="num">30000</span>;        <span class="com">// 30ms echo timeout (~510 cm max)</span>
+<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">TELEMETRY_INTERVAL_MS</span> = <span class="num">5000</span>;    <span class="com">// Telemetry period (5 seconds)</span>
+<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">FILTER_SAMPLE_COUNT</span> = <span class="num">5</span>;         <span class="com">// Burst samples for median sorting</span>
 
 <span class="kw">const char</span>* <span class="fn">WIFI_SSID</span>       = <span class="str">"Wokwi-GUEST"</span>;
 <span class="kw">const char</span>* <span class="fn">WIFI_PASSWORD</span>   = <span class="str">""</span>;
 <span class="kw">const char</span>* <span class="fn">DEVICE_BIN_ID</span>   = <span class="str">"BIN-001"</span>;
 <span class="kw">const char</span>* <span class="fn">BACKEND_API_URL</span> = <span class="str">"http://host.wokwi.internal:5000/api/bins/data"</span>;
 
-<span class="type">uint32_t</span> lastTransmissionTime = <span class="num">0</span>;
-<span class="type">uint32_t</span> transmissionCounter  = <span class="num">0</span>;
+<span class="type">uint32_t</span> lastTransmissionTime = <span class="num">0</span>, transmissionCounter = <span class="num">0</span>;
 
 <span class="type">float</span> <span class="fn">measureDistance</span>() {
   <span class="type">float</span> samples[FILTER_SAMPLE_COUNT];
