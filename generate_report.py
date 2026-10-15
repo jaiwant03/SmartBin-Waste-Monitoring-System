@@ -41,7 +41,7 @@ def build_report_html():
     font-family: 'Times New Roman', Times, 'Nimbus Roman No9 L', Georgia, serif;
     color: #0f172a;
     background: #ffffff;
-    line-height: 1.42;
+    line-height: 1.40;
     font-size: 12.0pt;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -172,7 +172,7 @@ def build_report_html():
     border-bottom: 1.5px solid #0f172a;
     padding-bottom: 2px;
     margin-top: 1px;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
     letter-spacing: 0.3px;
     text-transform: uppercase;
     line-height: 1.25;
@@ -184,8 +184,8 @@ def build_report_html():
     font-size: 15.0pt;
     font-weight: bold;
     color: #1e293b;
-    margin-top: 7px;
-    margin-bottom: 4px;
+    margin-top: 6px;
+    margin-bottom: 3.5px;
     line-height: 1.28;
   }
 
@@ -195,7 +195,7 @@ def build_report_html():
     text-align: justify;
     text-justify: inter-word;
     font-size: 12.0pt;
-    line-height: 1.40;
+    line-height: 1.38;
     font-family: 'Times New Roman', Times, serif;
   }
 
@@ -205,9 +205,9 @@ def build_report_html():
   }
 
   li {
-    margin-bottom: 3.5px;
+    margin-bottom: 3px;
     font-size: 12.0pt;
-    line-height: 1.38;
+    line-height: 1.36;
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
   }
@@ -217,16 +217,16 @@ def build_report_html():
     width: 100%;
     border-collapse: collapse;
     margin-top: 4px;
-    margin-bottom: 6px;
-    font-size: 10.5pt;
-    line-height: 1.34;
+    margin-bottom: 5px;
+    font-size: 10.2pt;
+    line-height: 1.30;
     font-family: 'Times New Roman', Times, serif;
   }
 
   table.data-table th,
   table.data-table td {
     border: 1px solid #94a3b8;
-    padding: 3.5px 7px;
+    padding: 3.5px 6.5px;
     text-align: left;
     vertical-align: top;
   }
@@ -235,7 +235,7 @@ def build_report_html():
     background-color: #f1f5f9;
     color: #0f172a;
     font-weight: bold;
-    font-size: 11.0pt;
+    font-size: 10.8pt;
     border-bottom: 1.5px solid #475569;
   }
 
@@ -246,7 +246,7 @@ def build_report_html():
   /* Monospace Code & Terminal Elements */
   code {
     font-family: 'JetBrains Mono', Consolas, monospace;
-    font-size: 9.2pt;
+    font-size: 9.0pt;
     background-color: #f1f5f9;
     padding: 1px 4px;
     border-radius: 3px;
@@ -258,13 +258,13 @@ def build_report_html():
     background: #0f172a;
     color: #f8fafc;
     font-family: 'JetBrains Mono', Consolas, monospace;
-    font-size: 8.6pt;
-    line-height: 1.28;
-    padding: 7px 10px;
+    font-size: 8.4pt;
+    line-height: 1.25;
+    padding: 6px 10px;
     border-radius: 5px;
     overflow: hidden;
-    margin-top: 4px;
-    margin-bottom: 5px;
+    margin-top: 3px;
+    margin-bottom: 4px;
     border: 1px solid #334155;
     white-space: pre-wrap;
     word-break: break-all;
@@ -291,12 +291,12 @@ def build_report_html():
     color: #38bdf8;
     font-family: 'JetBrains Mono', Consolas, monospace;
     font-size: 8.8pt;
-    line-height: 1.32;
+    line-height: 1.30;
     padding: 6px 10px;
     border-radius: 4px;
     border-left: 3.5px solid #38bdf8;
     margin-top: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   .terminal-header {
@@ -314,9 +314,9 @@ def build_report_html():
     background: #f8fafc;
     border: 1.2px solid #cbd5e1;
     border-radius: 5px;
-    padding: 6px;
-    margin-top: 4px;
-    margin-bottom: 6px;
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,7 +330,7 @@ def build_report_html():
     padding: 5px;
     text-align: center;
     margin-top: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   .img-card img {
@@ -359,28 +359,28 @@ def build_report_html():
     margin-top: 4px;
     margin-bottom: 5px;
     font-size: 11.2pt;
-    line-height: 1.38;
+    line-height: 1.36;
   }
 
   .math-box {
     background: #f8fafc;
     border: 1.2px solid #cbd5e1;
     border-left: 4px solid #0f172a;
-    padding: 6px 12px;
-    font-size: 11.5pt;
+    padding: 5px 12px;
+    font-size: 11.2pt;
     margin-top: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
-    line-height: 1.35;
+    line-height: 1.32;
   }
 
   /* Status Badges */
   .badge {
     display: inline-block;
-    padding: 2px 7px;
+    padding: 1.5px 6px;
     border-radius: 3px;
-    font-size: 8.8pt;
+    font-size: 8.5pt;
     font-weight: bold;
     font-family: 'JetBrains Mono', Consolas, monospace;
     text-transform: uppercase;
@@ -745,7 +745,44 @@ def build_report_html():
         <div class="math-box">
           Fill Percentage (%) = clamp( ((D_empty - D_measured) / (D_empty - D_full)) &times; 100,  0.0,  100.0 )
         </div>
-        <p>This formulation ensures that readings below the full limit (5 cm) are clamped cleanly to 100.0%, preventing erroneous percentages above 100%, while readings near the empty boundary are stabilized at 0.0%.</p>
+        <p>This mathematical clamping guarantees numerical stability across operational boundary conditions, preventing overflow values above 100% when debris rises near the transducer face, and maintaining a baseline 0.0% when empty:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Measured Distance (D)</th>
+              <th style="width: 25%;">Raw Math Calculation</th>
+              <th style="width: 25%;">Clamped Fill Percentage</th>
+              <th style="width: 25%;">Physical Container State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D &ge; 40.0 cm</td>
+              <td>&le; 0.0%</td>
+              <td><strong>0.0%</strong></td>
+              <td>Empty Receptacle (Baseline)</td>
+            </tr>
+            <tr>
+              <td>D = 22.5 cm</td>
+              <td>((40 - 22.5) / 35) &times; 100 = 50.0%</td>
+              <td><strong>50.0%</strong></td>
+              <td>Half-Full Receptacle</td>
+            </tr>
+            <tr>
+              <td>D = 8.5 cm</td>
+              <td>((40 - 8.5) / 35) &times; 100 = 90.0%</td>
+              <td><strong>90.0%</strong></td>
+              <td>High Collection Threshold Exceeded</td>
+            </tr>
+            <tr>
+              <td>D &le; 5.0 cm</td>
+              <td>&ge; 100.0%</td>
+              <td><strong>100.0%</strong></td>
+              <td>Critical Maximum Capacity (Full)</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="frame-footer">
@@ -771,71 +808,71 @@ def build_report_html():
         <p>The electronic interface coordinates the power supply, acoustic pulse trigger generation, and echo voltage level-shifting between the 5V HC-SR04 transducer module and the 3.3V GPIO architecture of the ESP32 microcontroller.</p>
 
         <h3 class="sub-heading">4.1 Wokwi Simulation Circuit Schematic</h3>
-        <div class="diagram-container">
-          <svg viewBox="0 0 680 150" width="100%" height="150" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="5" width="660" height="140" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+        <div class="diagram-container" style="padding: 3px; margin: 2px 0 4px 0;">
+          <svg viewBox="0 0 680 120" width="100%" height="120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="4" width="660" height="112" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
 
             <!-- HC-SR04 Block -->
-            <rect x="25" y="14" width="145" height="116" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
-            <circle cx="60" cy="50" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.8"/>
-            <circle cx="135" cy="50" r="20" fill="#334155" stroke="#94a3b8" stroke-width="1.8"/>
-            <text x="60" y="53" fill="#94a3b8" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRANSMIT</text>
-            <text x="135" y="53" fill="#94a3b8" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RECEIVE</text>
-            <text x="97" y="86" fill="#ffffff" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
-            <text x="97" y="98" fill="#38bdf8" font-size="7.2" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
+            <rect x="25" y="10" width="145" height="98" rx="5" fill="#1e293b" stroke="#0f172a" stroke-width="1.8"/>
+            <circle cx="60" cy="40" r="17" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+            <circle cx="135" cy="40" r="17" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="60" y="43" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TX</text>
+            <text x="135" y="43" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">RX</text>
+            <text x="97" y="68" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">HC-SR04</text>
+            <text x="97" y="79" fill="#38bdf8" font-size="6.8" font-family="'Times New Roman', Times, serif" text-anchor="middle">40 kHz Ultrasonic</text>
 
             <!-- Pins on HC-SR04 -->
-            <circle cx="42" cy="120" r="3.5" fill="#ef4444"/>
-            <text x="42" y="114" fill="#f87171" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
-            <circle cx="78" cy="120" r="3.5" fill="#3b82f6"/>
-            <text x="78" y="114" fill="#93c5fd" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
-            <circle cx="118" cy="120" r="3.5" fill="#10b981"/>
-            <text x="118" y="114" fill="#6ee7b7" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
-            <circle cx="152" cy="120" r="3.5" fill="#000000"/>
-            <text x="152" y="114" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <circle cx="42" cy="100" r="3" fill="#ef4444"/>
+            <text x="42" y="94" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VCC</text>
+            <circle cx="78" cy="100" r="3" fill="#3b82f6"/>
+            <text x="78" y="94" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">TRIG</text>
+            <circle cx="118" cy="100" r="3" fill="#10b981"/>
+            <text x="118" y="94" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ECHO</text>
+            <circle cx="152" cy="100" r="3" fill="#000000"/>
+            <text x="152" y="94" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
             <!-- ESP32 DevKit Block -->
-            <rect x="475" y="14" width="180" height="122" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
-            <rect x="525" y="19" width="80" height="16" rx="3" fill="#334155"/>
-            <text x="565" y="31" fill="#e2e8f0" font-size="8.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
-            <text x="565" y="50" fill="#60a5fa" font-size="9.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
-            <text x="565" y="62" fill="#94a3b8" font-size="7.5" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
+            <rect x="475" y="10" width="180" height="98" rx="5" fill="#0f172a" stroke="#2563eb" stroke-width="1.8"/>
+            <rect x="525" y="14" width="80" height="14" rx="2" fill="#334155"/>
+            <text x="565" y="25" fill="#e2e8f0" font-size="7.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32-WROOM</text>
+            <text x="565" y="42" fill="#60a5fa" font-size="8.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">ESP32 DevKit V1</text>
+            <text x="565" y="53" fill="#94a3b8" font-size="7.0" font-family="'Times New Roman', Times, serif" text-anchor="middle">Dual-Core 240MHz</text>
 
             <!-- MCU Pin Callouts -->
-            <rect x="480" y="74" width="46" height="13" fill="#1e293b" rx="2"/>
-            <text x="503" y="84" fill="#f87171" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
+            <rect x="480" y="62" width="46" height="11" fill="#1e293b" rx="2"/>
+            <text x="503" y="70" fill="#f87171" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VIN (5V)</text>
 
-            <rect x="480" y="92" width="46" height="13" fill="#1e293b" rx="2"/>
-            <text x="503" y="102" fill="#94a3b8" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
+            <rect x="480" y="76" width="46" height="11" fill="#1e293b" rx="2"/>
+            <text x="503" y="84" fill="#94a3b8" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">GND</text>
 
-            <rect x="480" y="110" width="46" height="13" fill="#1e293b" rx="2"/>
-            <text x="503" y="120" fill="#93c5fd" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
+            <rect x="480" y="90" width="46" height="11" fill="#1e293b" rx="2"/>
+            <text x="503" y="98" fill="#93c5fd" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D14 (Trig)</text>
 
-            <rect x="538" y="110" width="46" height="13" fill="#1e293b" rx="2"/>
-            <text x="561" y="120" fill="#6ee7b7" font-size="7.0" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
+            <rect x="538" y="90" width="46" height="11" fill="#1e293b" rx="2"/>
+            <text x="561" y="98" fill="#6ee7b7" font-size="6.5" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">D27 (Echo)</text>
 
             <!-- Voltage Divider Box -->
-            <rect x="235" y="32" width="180" height="78" rx="6" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <text x="325" y="48" fill="#7e22ce" font-size="8.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
+            <rect x="235" y="24" width="180" height="66" rx="5" fill="#f1f5f9" stroke="#9333ea" stroke-width="1.3" stroke-dasharray="4,2"/>
+            <text x="325" y="38" fill="#7e22ce" font-size="7.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">VOLTAGE DIVIDER (5V → 3.3V)</text>
 
             <!-- Resistor R1 -->
-            <rect x="255" y="58" width="40" height="14" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="275" y="68" fill="#0f172a" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
+            <rect x="255" y="48" width="40" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="275" y="57" fill="#0f172a" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R1: 1kΩ</text>
 
             <!-- Resistor R2 -->
-            <rect x="345" y="80" width="40" height="14" rx="2" fill="#cbd5e1" stroke="#475569"/>
-            <text x="365" y="90" fill="#0f172a" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
+            <rect x="345" y="66" width="40" height="12" rx="2" fill="#cbd5e1" stroke="#475569"/>
+            <text x="365" y="75" fill="#0f172a" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif" text-anchor="middle">R2: 2kΩ</text>
 
             <!-- Wiring Paths -->
-            <path d="M 42 120 L 42 136 L 440 136 L 440 81 L 480 81" fill="none" stroke="#ef4444" stroke-width="1.8"/>
-            <path d="M 152 120 L 152 128 L 450 128 L 450 99 L 480 99" fill="none" stroke="#0f172a" stroke-width="1.8"/>
-            <path d="M 78 120 L 78 116 L 220 116 L 220 116 L 480 116" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
-            <path d="M 118 120 L 118 65 L 255 65" fill="none" stroke="#10b981" stroke-width="1.8"/>
-            <text x="186" y="60" fill="#059669" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
-            <path d="M 295 65 L 325 65 L 325 116 L 538 116" fill="none" stroke="#9333ea" stroke-width="1.8"/>
-            <text x="382" y="112" fill="#7e22ce" font-size="7.2" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
-            <path d="M 325 65 L 325 87 L 345 87" fill="none" stroke="#9333ea" stroke-width="1.5"/>
-            <path d="M 385 87 L 410 87 L 410 99 L 450 99" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+            <path d="M 42 100 L 42 110 L 440 110 L 440 68 L 480 68" fill="none" stroke="#ef4444" stroke-width="1.6"/>
+            <path d="M 152 100 L 152 105 L 450 105 L 450 82 L 480 82" fill="none" stroke="#0f172a" stroke-width="1.6"/>
+            <path d="M 78 100 L 78 96 L 220 96 L 220 96 L 480 96" fill="none" stroke="#3b82f6" stroke-width="1.6"/>
+            <path d="M 118 100 L 118 54 L 255 54" fill="none" stroke="#10b981" stroke-width="1.6"/>
+            <text x="186" y="50" fill="#059669" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif">5V Pulse</text>
+            <path d="M 295 54 L 325 54 L 325 96 L 538 96" fill="none" stroke="#9333ea" stroke-width="1.6"/>
+            <text x="382" y="93" fill="#7e22ce" font-size="6.8" font-weight="bold" font-family="'Times New Roman', Times, serif">3.33V Scaled</text>
+            <path d="M 325 54 L 325 72 L 345 72" fill="none" stroke="#9333ea" stroke-width="1.3"/>
+            <path d="M 385 72 L 410 72 L 410 82 L 450 82" fill="none" stroke="#0f172a" stroke-width="1.3"/>
           </svg>
         </div>
 
@@ -843,11 +880,11 @@ def build_report_html():
         <table class="data-table">
           <thead>
             <tr>
-              <th style="width: 18%;">Component</th>
-              <th style="width: 14%;">Device Pin</th>
+              <th style="width: 17%;">Component</th>
+              <th style="width: 13%;">Device Pin</th>
               <th style="width: 20%;">Microcontroller Pin</th>
-              <th style="width: 16%;">Signal Level</th>
-              <th style="width: 32%;">Electrical Function &amp; Protection Details</th>
+              <th style="width: 15%;">Signal Level</th>
+              <th style="width: 35%;">Electrical Function &amp; Protection Details</th>
             </tr>
           </thead>
           <tbody>
@@ -856,7 +893,7 @@ def build_report_html():
               <td><code>VCC</code></td>
               <td>ESP32 <code>VIN</code> (5V Supply)</td>
               <td>+5.0V DC Power</td>
-              <td>Powers ultrasonic transducer oscillators and transmitter drivers. Requires stable 5V for full range.</td>
+              <td>Powers ultrasonic transducer oscillators. Requires stable 5V rail for full range.</td>
             </tr>
             <tr>
               <td><strong>HC-SR04 Sensor</strong></td>
@@ -870,35 +907,35 @@ def build_report_html():
               <td><code>TRIG</code></td>
               <td>ESP32 <code>GPIO 14</code> (D14)</td>
               <td>3.3V Logic Output</td>
-              <td>Actuated with a 10 µs HIGH pulse from MCU to trigger 8-cycle 40 kHz ultrasonic burst generation.</td>
+              <td>Actuated with 10 µs HIGH pulse to trigger 8-cycle 40 kHz ultrasonic burst generation.</td>
             </tr>
             <tr>
               <td><strong>HC-SR04 Sensor</strong></td>
               <td><code>ECHO</code></td>
               <td>Input to R1 (1 kΩ)</td>
               <td>5.0V Logic Output</td>
-              <td>Outputs a HIGH pulse whose pulse width directly equals round-trip flight time. Scaled by voltage divider.</td>
+              <td>Outputs HIGH pulse equal to flight time. Scaled safely by voltage divider.</td>
             </tr>
             <tr>
-              <td><strong>Divider Node (R1 / R2)</strong></td>
+              <td><strong>Divider Node (R1/R2)</strong></td>
               <td>Center Tap</td>
               <td>ESP32 <code>GPIO 27</code> (D27)</td>
               <td>3.33V Logic Input</td>
-              <td>Safe level-shifted echo input. Protects ESP32 internal ESD diodes and gate oxides against 5V overstress.</td>
+              <td>Safe level-shifted echo input. Protects ESP32 gate oxides against 5V overstress.</td>
             </tr>
             <tr>
               <td><strong>Divider Lower Leg (R2)</strong></td>
               <td>Shunt Terminal</td>
               <td>ESP32 <code>GND</code></td>
               <td>0V Ground Shunt</td>
-              <td>2 kΩ shunt to ground completing the voltage division ratio: V_out = 5V &times; (2 / (1 + 2)) = 3.33V.</td>
+              <td>2 kΩ shunt completing voltage division: V_out = 5V &times; (2 / (1 + 2)) = 3.33V.</td>
             </tr>
             <tr>
               <td><strong>Status Diagnostic LED</strong></td>
-              <td>Anode / Cathode</td>
+              <td>Anode/Cathode</td>
               <td>ESP32 <code>GPIO 2</code></td>
               <td>3.3V Digital Output</td>
-              <td>Built-in surface-mount LED for visual confirmation of Wi-Fi association and HTTP telemetry transmission.</td>
+              <td>Built-in SMD LED for visual confirmation of Wi-Fi link and telemetry dispatches.</td>
             </tr>
           </tbody>
         </table>
@@ -934,26 +971,23 @@ def build_report_html():
 
         <h3 class="sub-heading">5.1 Firmware Source Code: Calibration Constants &amp; 5-Sample Median Filter</h3>
         <pre class="code-block"><code><span class="com">/**
- * SmartBin — Municipal Solid Waste Monitoring Firmware
- * Target: ESP32 DevKit V1 (Wokwi) / ESP8266 NodeMCU v2
- * Pinout: TRIG -> GPIO14, ECHO -> GPIO27 (via 1k/2k Divider), LED -> GPIO2
+ * SmartBin — Municipal Solid Waste Monitoring Firmware (ESP32 DevKit V1)
+ * Pinout: TRIG -&gt; GPIO14, ECHO -&gt; GPIO27 (via 1k/2k Divider), LED -&gt; GPIO2
  */</span>
 <span class="kw">#include</span> <span class="str">&lt;WiFi.h&gt;</span>
 <span class="kw">#include</span> <span class="str">&lt;HTTPClient.h&gt;</span>
 
-<span class="com">// --- Hardware Pinout and Operational Calibration ---</span>
 <span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">PIN_TRIG</span> = <span class="num">14</span>;                  <span class="com">// Ultrasonic trigger pulse output</span>
 <span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">PIN_ECHO</span> = <span class="num">27</span>;                  <span class="com">// Level-shifted echo pulse input</span>
 <span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">PIN_LED</span>  = <span class="num">2</span>;                   <span class="com">// Built-in activity LED indicator</span>
 
-<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">EMPTY_DISTANCE_CM</span>      = <span class="num">40.0f</span>; <span class="com">// Distance from sensor to empty bin floor</span>
-<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">FULL_DISTANCE_CM</span>       = <span class="num">5.0f</span>;  <span class="com">// Distance when trash reaches max capacity</span>
-<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">SOUND_SPEED_CM_PER_US</span>  = <span class="num">0.0343f</span>;<span class="com">// Acoustic speed at 20°C in air</span>
-<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">PULSE_TIMEOUT_US</span>       = <span class="num">30000</span>; <span class="com">// 30ms echo timeout (~510 cm max range)</span>
-<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">TELEMETRY_INTERVAL_MS</span>  = <span class="num">5000</span>;  <span class="com">// Periodic telemetry period (5 seconds)</span>
-<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">FILTER_SAMPLE_COUNT</span>    = <span class="num">5</span>;     <span class="com">// Number of burst samples for median sort</span>
+<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">EMPTY_DISTANCE_CM</span>      = <span class="num">40.0f</span>; <span class="com">// Distance from sensor to bin floor</span>
+<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">FULL_DISTANCE_CM</span>       = <span class="num">5.0f</span>;  <span class="com">// Distance when trash reaches max fill</span>
+<span class="kw">constexpr</span> <span class="type">float</span>    <span class="fn">SOUND_SPEED_CM_PER_US</span>  = <span class="num">0.0343f</span>;<span class="com">// Acoustic velocity at 20°C in air</span>
+<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">PULSE_TIMEOUT_US</span>       = <span class="num">30000</span>; <span class="com">// 30ms echo timeout (~510 cm max)</span>
+<span class="kw">constexpr</span> <span class="type">uint32_t</span> <span class="fn">TELEMETRY_INTERVAL_MS</span>  = <span class="num">5000</span>;  <span class="com">// Telemetry period (5 seconds)</span>
+<span class="kw">constexpr</span> <span class="type">uint8_t</span>  <span class="fn">FILTER_SAMPLE_COUNT</span>    = <span class="num">5</span>;     <span class="com">// Burst samples for median sorting</span>
 
-<span class="com">// Network and API Credentials</span>
 <span class="kw">const char</span>* <span class="fn">WIFI_SSID</span>       = <span class="str">"Wokwi-GUEST"</span>;
 <span class="kw">const char</span>* <span class="fn">WIFI_PASSWORD</span>   = <span class="str">""</span>;
 <span class="kw">const char</span>* <span class="fn">DEVICE_BIN_ID</span>   = <span class="str">"BIN-001"</span>;
@@ -962,10 +996,6 @@ def build_report_html():
 <span class="type">uint32_t</span> lastTransmissionTime = <span class="num">0</span>;
 <span class="type">uint32_t</span> transmissionCounter  = <span class="num">0</span>;
 
-<span class="com">/**
- * Measures raw echo pulses and rejects acoustic multipath noise using a 5-sample median filter.
- * Returns median distance in centimeters, or -1.0 on timeout.
- */</span>
 <span class="type">float</span> <span class="fn">measureDistance</span>() {
   <span class="type">float</span> samples[FILTER_SAMPLE_COUNT];
   <span class="type">uint8_t</span> validSamples = <span class="num">0</span>;
@@ -981,12 +1011,12 @@ def build_report_html():
     <span class="kw">if</span> (duration &gt; <span class="num">0</span>) {
       samples[validSamples++] = (duration * SOUND_SPEED_CM_PER_US) / <span class="num">2.0f</span>;
     }
-    <span class="fn">delay</span>(<span class="num">20</span>); <span class="com">// Damping delay between acoustic pings</span>
+    <span class="fn">delay</span>(<span class="num">20</span>); <span class="com">// Acoustic damping interval</span>
   }
 
-  <span class="kw">if</span> (validSamples == <span class="num">0</span>) <span class="kw">return</span> -<span class="num">1.0f</span>; <span class="com">// Sensor fault / timeout</span>
+  <span class="kw">if</span> (validSamples == <span class="num">0</span>) <span class="kw">return</span> -<span class="num">1.0f</span>; <span class="com">// Timeout / fault</span>
 
-  <span class="com">// Bubble sort valid samples to extract the robust median value</span>
+  <span class="com">// In-place sorting to reject transient multipath outliers</span>
   <span class="kw">for</span> (<span class="type">uint8_t</span> i = <span class="num">0</span>; i + <span class="num">1</span> &lt; validSamples; ++i) {
     <span class="kw">for</span> (<span class="type">uint8_t</span> j = <span class="num">0</span>; j + <span class="num">1</span> &lt; validSamples - i; ++j) {
       <span class="kw">if</span> (samples[j] &gt; samples[j + <span class="num">1</span>]) {
@@ -996,7 +1026,7 @@ def build_report_html():
       }
     }
   }
-  <span class="kw">return</span> samples[validSamples / <span class="num">2</span>]; <span class="com">// Return median index</span>
+  <span class="kw">return</span> samples[validSamples / <span class="num">2</span>]; <span class="com">// Return median sample</span>
 }</code></pre>
       </div>
 
@@ -1222,9 +1252,40 @@ def build_report_html():
           </tbody>
         </table>
 
-        <h3 class="sub-heading">5.7 Dynamic Configuration &amp; Remote Over-the-Air Reclassification</h3>
-        <p>In municipal deployments, waste generation dynamics vary substantially across urban zones and seasons. High-density commercial areas near markets generate high-volume biodegradable refuse requiring lower safety thresholds (e.g., 75% trigger), whereas dry recyclable collection points operate efficiently at 90% thresholds.</p>
-        <p>By decoupling raw sensor measurement from cloud dispatch logic, the SmartBin backend dynamically applies zonally tailored calibration matrices without modifying on-device firmware. When network administrators push new parameters through the React dashboard, all subsequent telemetry ingestions immediately conform to the updated threshold limits, providing centralized agility and zero device downtime.</p>
+        <h3 class="sub-heading">5.7 Distributed Edge vs. Cloud Architectural Responsibilities</h3>
+        <p>The SmartBin platform clearly delineates compute responsibilities between the physical ESP32 edge microcontroller and the centralized cloud dashboard:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">System Function</th>
+              <th style="width: 37%;">Edge Layer (ESP32 Microcontroller)</th>
+              <th style="width: 38%;">Cloud Layer (Node.js &amp; React Dashboard)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Signal Acquisition</strong></td>
+              <td>Fires 10 µs acoustic trigger; measures echo microseconds.</td>
+              <td>Ingests timestamped JSON telemetry payloads via REST.</td>
+            </tr>
+            <tr>
+              <td><strong>Noise Suppression</strong></td>
+              <td>Executes 5-sample median filter; discards 2 outliers.</td>
+              <td>Validates sensor bounds; flags consecutive anomaly warnings.</td>
+            </tr>
+            <tr>
+              <td><strong>Status Classification</strong></td>
+              <td>Calculates preliminary tier for local diagnostic LED toggling.</td>
+              <td>Applies dynamic municipal threshold matrix and zone rules.</td>
+            </tr>
+            <tr>
+              <td><strong>Dispatch Management</strong></td>
+              <td>Operates autonomously without routing knowledge.</td>
+              <td>Deduplicates incident alerts; queues truck routing dispatches.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="frame-footer">
@@ -1373,7 +1434,7 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
         <p>The system was rigorously evaluated across 5 comprehensive test scenarios representing baseline conditions, progressive accumulation, collection thresholds, emergency overflows, and hardware fault injection.</p>
 
         <h3 class="sub-heading">7.1 Quantitative Experimental Test Cases: Expected vs. Actual Validation</h3>
-        <table class="data-table">
+        <table class="data-table" style="font-size: 9.8pt; line-height: 1.25;">
           <thead>
             <tr>
               <th style="width: 10%;">Test ID</th>
@@ -1429,7 +1490,7 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
         </table>
 
         <h3 class="sub-heading">7.2 System Latency, Telemetry Reliability &amp; Performance Benchmarks</h3>
-        <table class="data-table">
+        <table class="data-table" style="font-size: 9.8pt; line-height: 1.25;">
           <thead>
             <tr>
               <th style="width: 25%;">Performance Parameter</th>
@@ -1496,7 +1557,7 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
         <p>Experimental validation confirmed 100% detection of high-fill states, zero false alert flooding, and seamless real-time visualization on the municipal dashboard. The system directly addresses urban sanitation inefficiencies, eliminating uncontained sidewalk overflows while drastically trimming municipal vehicle operating costs.</p>
 
         <h3 class="sub-heading">8.2 Real-World Municipal and Commercial Applications</h3>
-        <ul>
+        <ul style="margin-bottom: 4px;">
           <li><strong>Smart Cities &amp; Municipalities:</strong> City-wide deployment on public waste receptacles to dynamically route garbage compactors, saving up to 35% in fuel and vehicle maintenance costs.</li>
           <li><strong>Educational &amp; Corporate Campuses:</strong> Automated sanitation tracking across large multi-building complexes (cafeterias, lecture halls, residential dormitories) to maintain clean campus environments.</li>
           <li><strong>Healthcare Facilities &amp; Hospitals:</strong> Non-contact monitoring of biohazard waste receptacles with automated disposal alerts to ensure strict hygiene compliance.</li>
@@ -1504,19 +1565,19 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
         </ul>
 
         <h3 class="sub-heading">8.3 Future Technological Enhancements</h3>
-        <ul>
+        <ul style="margin-bottom: 6px;">
           <li><strong>Multi-Sensor Fusion (Odour &amp; Fire Detection):</strong> Integrate an MQ-135 air quality gas sensor (detecting methane CH4, ammonia NH3) and a DHT22 temperature sensor to detect decomposing organic decay and early smoldering fire hazards.</li>
           <li><strong>AI Dynamic Vehicle Routing Problem (VRP):</strong> Connect the backend alert engine to the Google Maps Distance Matrix API and genetic route-optimization algorithms to dynamically recompute optimal turn-by-turn truck navigation paths based on real-time bin priority rankings.</li>
           <li><strong>Long-Range LPWAN (LoRaWAN / NB-IoT):</strong> Replace Wi-Fi with LoRaWAN (868/915 MHz) or NB-IoT cellular modules to enable multi-kilometer transmission ranges with battery lives exceeding 5 years on a single charge.</li>
           <li><strong>Solar Energy Harvesting &amp; Deep Sleep:</strong> Equip bins with a compact 5V solar panel, 18650 Li-ion battery, and deep-sleep cycling (waking for 200 ms every 5 minutes) for self-sustaining off-grid operation.</li>
         </ul>
 
-        <div style="margin-top: 10px; border-top: 1px dashed #cbd5e1; padding-top: 6px; display: flex; justify-content: space-between; font-size: 9.5pt; color: #475569;">
-          <div>
+        <div style="margin-top: 6px; border-top: 1px dashed #cbd5e1; padding-top: 4px; display: flex; justify-content: space-between; font-size: 9.5pt; color: #334155;">
+          <div style="width: 48%;">
             <strong>Student / Author Signature:</strong> _______________________<br>
             <span>Date: ________________________</span>
           </div>
-          <div style="text-align: right;">
+          <div style="width: 48%; text-align: right;">
             <strong>Faculty / Evaluator Signature:</strong> _______________________<br>
             <span>Grade &amp; Comments: ________________________</span>
           </div>
@@ -1548,6 +1609,13 @@ def main():
     abs_html = os.path.abspath(html_file)
     abs_pdf = os.path.abspath(report_pdf)
 
+    # If the PDF exists and is not locked, remove it to ensure fresh write
+    if os.path.exists(abs_pdf):
+        try:
+            os.remove(abs_pdf)
+        except Exception as e:
+            print(f"Warning: could not pre-delete {abs_pdf}: {e}")
+
     cmd = [
         chrome_path,
         "--headless=new",
@@ -1561,7 +1629,7 @@ def main():
     subprocess.run(cmd, check=True)
 
     if os.path.exists(abs_pdf):
-        # Also copy to REPORT.pdf for consistency if needed
+        # Also sync to REPORT.pdf
         shutil.copyfile(abs_pdf, "REPORT.pdf")
         doc = pymupdf.open(abs_pdf)
         print(f"SUCCESS: Generated {report_pdf}")
