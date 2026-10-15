@@ -248,34 +248,34 @@ def build_report_html():
     padding: 2.2px 5.5px;
   }
 
-  /* Monospace Code & Terminal Elements */
+  /* Monospace Code & Terminal Elements - Clean White Academic Style */
   code {
     font-family: 'JetBrains Mono', Consolas, monospace;
     font-size: 9.0pt;
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     padding: 1px 4px;
     border-radius: 3px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #cbd5e1;
     color: #0f172a;
   }
 
   pre.code-block {
-    background: #0f172a;
-    color: #f8fafc;
+    background: #ffffff;
+    color: #0f172a;
     font-family: 'JetBrains Mono', Consolas, monospace;
-    font-size: 8.4pt;
-    line-height: 1.25;
+    font-size: 8.2pt;
+    line-height: 1.20;
     padding: 6px 10px;
-    border-radius: 5px;
+    border-radius: 4px;
     overflow: hidden;
     margin-top: 3px;
     margin-bottom: 4px;
-    border: 1px solid #334155;
+    border: 1.2px solid #94a3b8;
     white-space: pre-wrap;
     word-break: break-all;
   }
 
-  /* Ensure nested code tags inside pre do NOT have white background */
+  /* Ensure nested code tags inside pre do NOT have gray or white background strips */
   pre.code-block code {
     background: transparent !important;
     color: inherit !important;
@@ -284,32 +284,35 @@ def build_report_html():
     font-size: inherit !important;
   }
 
-  pre.code-block .com { color: #94a3b8; font-style: italic; }
-  pre.code-block .kw  { color: #f472b6; font-weight: bold; }
-  pre.code-block .str { color: #38bdf8; }
-  pre.code-block .num { color: #fbbf24; }
-  pre.code-block .fn  { color: #a78bfa; }
-  pre.code-block .type{ color: #4ade80; }
+  /* Academic high-contrast syntax highlighting on white background */
+  pre.code-block .com { color: #52525b; font-style: italic; }
+  pre.code-block .kw  { color: #000000; font-weight: bold; }
+  pre.code-block .str { color: #15803d; font-weight: 500; }
+  pre.code-block .num { color: #b45309; }
+  pre.code-block .fn  { color: #1e3a8a; font-weight: 600; }
+  pre.code-block .type{ color: #0284c7; font-weight: 600; }
 
   .terminal-box {
-    background: #090d16;
-    color: #38bdf8;
+    background: #ffffff;
+    color: #0f172a;
     font-family: 'JetBrains Mono', Consolas, monospace;
-    font-size: 8.8pt;
-    line-height: 1.30;
+    font-size: 8.6pt;
+    line-height: 1.28;
     padding: 6px 10px;
     border-radius: 4px;
-    border-left: 3.5px solid #38bdf8;
+    border: 1.2px solid #94a3b8;
+    border-left: 4px solid #1e293b;
     margin-top: 4px;
     margin-bottom: 5px;
   }
 
   .terminal-header {
-    color: #94a3b8;
+    color: #475569;
     font-size: 8.0pt;
-    border-bottom: 1px solid #1e293b;
-    padding-bottom: 2px;
-    margin-bottom: 4px;
+    font-weight: bold;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
   }
