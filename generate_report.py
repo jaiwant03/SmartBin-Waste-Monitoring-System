@@ -882,7 +882,7 @@ def build_report_html():
         </div>
 
         <h3 class="sub-heading">4.2 Complete Hardware Pin Connections Table</h3>
-        <table class="data-table">
+        <table class="data-table compact-table" style="font-size: 9.6pt; line-height: 1.20;">
           <thead>
             <tr>
               <th style="width: 17%;">Component</th>
@@ -947,7 +947,7 @@ def build_report_html():
 
         <h3 class="sub-heading">4.3 Overvoltage Protection Engineering Rationale</h3>
         <p>The ESP32 microcontroller operates on 3.3V CMOS logic rails. While the HC-SR04 trigger pin responds reliably to 3.3V trigger signals, its ECHO pin drives a full 5.0V TTL pulse. Direct connection of the 5.0V ECHO output to a 3.3V GPIO input exceeds the absolute maximum rating of the MCU (V_DD + 0.3V = 3.6V), risking progressive gate dielectric breakdown and permanent pin latch-up. By implementing a passive voltage divider with R1 = 1 kΩ and R2 = 2 kΩ, the peak voltage is clamped to a safe level:</p>
-        <div class="math-box">
+        <div class="math-box" style="padding: 4px 10px; margin-top: 3px; margin-bottom: 3px; font-size: 10.8pt;">
           V_GPIO27 = V_ECHO &times; (R2 / (R1 + R2)) = 5.0 V &times; (2000 / (1000 + 2000)) = 3.33 V  (100% safe for 3.3V inputs)
         </div>
       </div>
