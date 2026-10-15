@@ -1634,8 +1634,6 @@ def main():
     subprocess.run(cmd, check=True)
 
     if os.path.exists(abs_pdf):
-        # Also sync to REPORT.pdf
-        shutil.copyfile(abs_pdf, "REPORT.pdf")
         doc = pymupdf.open(abs_pdf)
         print(f"SUCCESS: Generated {report_pdf}")
         print(f"Total Pages: {len(doc)}")
