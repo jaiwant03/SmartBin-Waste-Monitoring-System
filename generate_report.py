@@ -813,8 +813,8 @@ def build_report_html():
         <p>The electronic interface coordinates the power supply, acoustic pulse trigger generation, and echo voltage level-shifting between the 5V HC-SR04 transducer module and the 3.3V GPIO architecture of the ESP32 microcontroller.</p>
 
         <h3 class="sub-heading">4.1 Wokwi Simulation Circuit Schematic</h3>
-        <div class="diagram-container" style="padding: 3px; margin: 2px 0 4px 0;">
-          <svg viewBox="0 0 680 120" width="100%" height="120" xmlns="http://www.w3.org/2000/svg">
+        <div class="diagram-container" style="padding: 2px; margin: 2px 0 3px 0;">
+          <svg viewBox="0 0 680 120" width="100%" height="95" xmlns="http://www.w3.org/2000/svg">
             <rect x="10" y="4" width="660" height="112" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
 
             <!-- HC-SR04 Block -->
