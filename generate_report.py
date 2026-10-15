@@ -120,27 +120,27 @@ def build_report_html():
     overflow: hidden;
   }
 
-  /* Document Title: 19pt Bold Times New Roman */
+  /* Document Title: Clean Academic 17pt Bold */
   h1.doc-title {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 19.0pt;
+    font-size: 17.0pt;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
     color: #0f172a;
-    line-height: 1.24;
+    line-height: 1.22;
     margin-bottom: 4px;
   }
 
   .doc-subtitle {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 12.0pt;
+    font-size: 11.5pt;
     font-style: italic;
     text-align: center;
     color: #334155;
-    margin-bottom: 7px;
-    line-height: 1.30;
+    margin-bottom: 6px;
+    line-height: 1.26;
   }
 
   .meta-table {
@@ -163,30 +163,30 @@ def build_report_html():
     color: #0f172a;
   }
 
-  /* Main Section Headings: 18pt Bold Times New Roman */
+  /* All Main Section Headings: Uniform, Clean 15.5pt Bold */
   h2.section-heading {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18.0pt;
+    font-size: 15.5pt;
     font-weight: bold;
     color: #0f172a;
-    border-bottom: 1.5px solid #0f172a;
+    border-bottom: 1.2px solid #334155;
     padding-bottom: 2px;
-    margin-top: 1px;
-    margin-bottom: 6px;
-    letter-spacing: 0.3px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
-    line-height: 1.25;
+    line-height: 1.24;
   }
 
-  /* Subheadings: 15pt Bold Times New Roman */
+  /* All Subheadings: Uniform, Clean 13.5pt Bold */
   h3.sub-heading {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15.0pt;
+    font-size: 13.5pt;
     font-weight: bold;
-    color: #1e293b;
-    margin-top: 6px;
-    margin-bottom: 3.5px;
-    line-height: 1.28;
+    color: #0f172a;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    line-height: 1.25;
   }
 
   /* Body Paragraphs: 12pt Justified Times New Roman */
