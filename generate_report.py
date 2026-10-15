@@ -1560,33 +1560,20 @@ GET https://api.thingspeak.com/update?api_key=THINGSPEAK_WRITE_KEY&amp;field1=31
         <p>Experimental validation confirmed 100% detection of high-fill states, zero false alert flooding, and seamless real-time visualization on the municipal dashboard. The system directly addresses urban sanitation inefficiencies, eliminating uncontained sidewalk overflows while drastically trimming municipal vehicle operating costs.</p>
 
         <h3 class="sub-heading">8.2 Real-World Municipal and Commercial Applications</h3>
-        <ul style="margin-left: 20px; margin-bottom: 3px;">
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Smart Cities &amp; Municipalities:</strong> City-wide deployment on public waste receptacles to dynamically route garbage compactors, saving up to 35% in fuel and vehicle maintenance costs.</li>
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Educational &amp; Corporate Campuses:</strong> Automated sanitation tracking across large multi-building complexes (cafeterias, lecture halls, residential dormitories) to maintain clean campus environments.</li>
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Healthcare Facilities &amp; Hospitals:</strong> Non-contact monitoring of biohazard waste receptacles with automated disposal alerts to ensure strict hygiene compliance.</li>
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Commercial Malls &amp; Transit Hubs:</strong> Airports, train terminals, and shopping centers optimize janitorial staffing by cleaning bins only when capacity reaches threshold levels.</li>
+        <ul style="margin-left: 22px; margin-bottom: 6px;">
+          <li style="margin-bottom: 4px; line-height: 1.36;"><strong>Smart Cities &amp; Municipalities:</strong> City-wide deployment on public waste receptacles to dynamically route garbage compactors, saving up to 35% in fuel and vehicle maintenance costs.</li>
+          <li style="margin-bottom: 4px; line-height: 1.36;"><strong>Educational &amp; Corporate Campuses:</strong> Automated sanitation tracking across large multi-building complexes (cafeterias, lecture halls, residential dormitories) to maintain clean campus environments.</li>
+          <li style="margin-bottom: 4px; line-height: 1.36;"><strong>Healthcare Facilities &amp; Hospitals:</strong> Non-contact monitoring of biohazard waste receptacles with automated disposal alerts to ensure strict hygiene compliance.</li>
+          <li style="margin-bottom: 4px; line-height: 1.36;"><strong>Commercial Malls &amp; Transit Hubs:</strong> Airports, train terminals, and shopping centers optimize janitorial staffing by cleaning bins only when capacity reaches threshold levels.</li>
         </ul>
 
         <h3 class="sub-heading">8.3 Future Technological Enhancements</h3>
-        <ul style="margin-left: 20px; margin-bottom: 3px;">
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Multi-Sensor Fusion (Odour &amp; Fire Detection):</strong> Integrate an MQ-135 air quality gas sensor (detecting methane CH4, ammonia NH3) and a DHT22 temperature sensor to detect decomposing organic decay and early smoldering fire hazards.</li>
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>AI Dynamic Vehicle Routing Problem (VRP):</strong> Connect the backend alert engine to the Google Maps Distance Matrix API and genetic route-optimization algorithms to dynamically recompute optimal turn-by-turn truck navigation paths based on real-time bin priority rankings.</li>
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Long-Range LPWAN (LoRaWAN / NB-IoT):</strong> Replace Wi-Fi with LoRaWAN (868/915 MHz) or NB-IoT cellular modules to enable multi-kilometer transmission ranges with battery lives exceeding 5 years on a single charge.</li>
-          <li style="margin-bottom: 2px; line-height: 1.32;"><strong>Solar Energy Harvesting &amp; Deep Sleep:</strong> Equip bins with a compact 5V solar panel, 18650 Li-ion battery, and deep-sleep cycling (waking for 200 ms every 5 minutes) for self-sustaining off-grid operation.</li>
+        <ul style="margin-left: 22px; margin-bottom: 6px;">
+          <li style="margin-bottom: 4px; line-height: 1.36;"><strong>Multi-Sensor Fusion (Odour &amp; Fire Detection):</strong> Integrate an MQ-135 air quality gas sensor (detecting methane CH4, ammonia NH3) and a DHT22 temperature sensor to detect decomposing organic decay and early smoldering fire hazards.</li>
+          <li style="margin-bottom: 2px; line-height: 1.36;"><strong>AI Dynamic Vehicle Routing Problem (VRP):</strong> Connect the backend alert engine to the Google Maps Distance Matrix API and genetic route-optimization algorithms to dynamically recompute optimal turn-by-turn truck navigation paths based on real-time bin priority rankings.</li>
+          <li style="margin-bottom: 4px; line-height: 1.36;"><strong>Long-Range LPWAN (LoRaWAN / NB-IoT):</strong> Replace Wi-Fi with LoRaWAN (868/915 MHz) or NB-IoT cellular modules to enable multi-kilometer transmission ranges with battery lives exceeding 5 years on a single charge.</li>
+          <li style="margin-bottom: 4px; line-height: 1.36;"><strong>Solar Energy Harvesting &amp; Deep Sleep:</strong> Equip bins with a compact 5V solar panel, 18650 Li-ion battery, and deep-sleep cycling (waking for 200 ms every 5 minutes) for self-sustaining off-grid operation.</li>
         </ul>
-
-        <table style="width: 100%; border: 1px dashed #94a3b8; margin-top: 4px; font-family: 'Times New Roman', Times, serif; font-size: 9.2pt; color: #0f172a; border-collapse: collapse;">
-          <tr>
-            <td style="width: 50%; padding: 4px 8px; vertical-align: top; border-right: 1px dashed #94a3b8;">
-              <strong>Student / Author Signature:</strong> _______________________<br>
-              <span style="font-size: 8.8pt; color: #475569;">Date: ________________________</span>
-            </td>
-            <td style="width: 50%; padding: 4px 8px; vertical-align: top;">
-              <strong>Faculty / Evaluator Signature:</strong> _______________________<br>
-              <span style="font-size: 8.8pt; color: #475569;">Grade &amp; Comments: ________________________</span>
-            </td>
-          </tr>
-        </table>
       </div>
 
       <div class="frame-footer">
