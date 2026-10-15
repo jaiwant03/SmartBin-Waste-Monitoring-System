@@ -47,14 +47,14 @@ def build_report_html():
     print-color-adjust: exact;
   }
 
-  /* Page container with 10mm top/bottom, 12mm side margin for precise A4 print */
+  /* Page container with 7mm top/bottom, 12mm side margin for precise A4 print */
   .page {
     width: 210mm;
     height: 297mm;
     max-height: 297mm;
     page-break-after: always;
     break-after: page;
-    padding: 10mm 12mm;
+    padding: 7mm 12mm;
     position: relative;
     background: #ffffff;
     display: flex;
@@ -68,7 +68,7 @@ def build_report_html():
     width: 100%;
     height: 100%;
     border: 1.5px solid #1e293b;
-    padding: 6mm 10mm 5mm 10mm;
+    padding: 4.5mm 9mm 3.5mm 9mm;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -241,6 +241,11 @@ def build_report_html():
 
   table.data-table tr:nth-child(even) td {
     background-color: #f8fafc;
+  }
+
+  table.data-table.compact-table th,
+  table.data-table.compact-table td {
+    padding: 2.2px 5.5px;
   }
 
   /* Monospace Code & Terminal Elements */
